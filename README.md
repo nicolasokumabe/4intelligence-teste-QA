@@ -1,0 +1,1 @@
+# 4intelligence-teste-QA
