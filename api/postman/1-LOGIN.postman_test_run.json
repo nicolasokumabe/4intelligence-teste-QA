@@ -1,0 +1,351 @@
+{
+	"id": "b4364c25-6fc6-4c38-b59a-4350eb329b80",
+	"name": "1-LOGIN",
+	"timestamp": "2024-03-21T03:09:32.698Z",
+	"collection_id": "29279522-3c659025-1f31-4570-8106-af6a48d9b5f0",
+	"folder_id": 0,
+	"environment_id": "29279522-1d388418-0748-4154-9cc0-44cf1f434611",
+	"totalPass": 18,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "03842ce1-de52-4101-a8da-f127f2937914",
+			"name": "Criar usuário 0",
+			"url": "https://serverest.dev/usuarios",
+			"time": 322,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				322
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "eb50facb-48af-4eda-8f3a-bf33860e47d0",
+			"name": "Login com sucesso",
+			"url": "https://serverest.dev/login",
+			"time": 159,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				159
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "30aeedbd-da18-4639-b49b-cb53756f6121",
+			"name": "Email inválido",
+			"url": "https://serverest.dev/login",
+			"time": 237,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code deve ser 401": true,
+				"Valida mensagem de erro": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 401": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de erro": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				237
+			],
+			"allTests": [
+				{
+					"Status code deve ser 401": true,
+					"Valida mensagem de erro": true
+				}
+			]
+		},
+		{
+			"id": "3d147e8c-82ed-478e-8244-360fb4b278ed",
+			"name": "Senha inválida",
+			"url": "https://serverest.dev/login",
+			"time": 188,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code deve ser 401": true,
+				"Valida mensagem de erro": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 401": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de erro": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				188
+			],
+			"allTests": [
+				{
+					"Status code deve ser 401": true,
+					"Valida mensagem de erro": true
+				}
+			]
+		},
+		{
+			"id": "2a1da124-1f8e-4d68-9244-fad6dc83695a",
+			"name": "Email em branco",
+			"url": "https://serverest.dev/login",
+			"time": 157,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de erro": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de erro": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				157
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de erro": true
+				}
+			]
+		},
+		{
+			"id": "6e72a484-ccd4-42cd-9358-6720ec1e12c7",
+			"name": "Sem o campo email",
+			"url": "https://serverest.dev/login",
+			"time": 205,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de erro": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de erro": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				205
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de erro": true
+				}
+			]
+		},
+		{
+			"id": "cbe4628b-a75d-405a-a3e9-a903d1491d4a",
+			"name": "Senha em branco",
+			"url": "https://serverest.dev/login",
+			"time": 381,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de erro": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de erro": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				381
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de erro": true
+				}
+			]
+		},
+		{
+			"id": "3f2d1c6a-1e09-413c-bf3a-416479cb829d",
+			"name": "Sem o campo senha",
+			"url": "https://serverest.dev/login",
+			"time": 162,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de erro": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de erro": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				162
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de erro": true
+				}
+			]
+		},
+		{
+			"id": "25fca6c9-ca5c-4c32-9876-d795b10fb1b5",
+			"name": "Excluir usuário 0",
+			"url": "https://serverest.dev/usuarios/UOidCxVbwXgAXduj",
+			"time": 217,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				217
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2028,
+	"collection": {
+		"requests": [
+			{
+				"id": "03842ce1-de52-4101-a8da-f127f2937914",
+				"method": "POST"
+			},
+			{
+				"id": "eb50facb-48af-4eda-8f3a-bf33860e47d0",
+				"method": "POST"
+			},
+			{
+				"id": "30aeedbd-da18-4639-b49b-cb53756f6121",
+				"method": "POST"
+			},
+			{
+				"id": "3d147e8c-82ed-478e-8244-360fb4b278ed",
+				"method": "POST"
+			},
+			{
+				"id": "2a1da124-1f8e-4d68-9244-fad6dc83695a",
+				"method": "POST"
+			},
+			{
+				"id": "6e72a484-ccd4-42cd-9358-6720ec1e12c7",
+				"method": "POST"
+			},
+			{
+				"id": "cbe4628b-a75d-405a-a3e9-a903d1491d4a",
+				"method": "POST"
+			},
+			{
+				"id": "3f2d1c6a-1e09-413c-bf3a-416479cb829d",
+				"method": "POST"
+			},
+			{
+				"id": "25fca6c9-ca5c-4c32-9876-d795b10fb1b5",
+				"method": "DELETE"
+			}
+		]
+	}
+}
