@@ -1,4 +1,4 @@
-describe('login', () => {
+describe('produtos', () => {
   const email1 = 'nicolas.qa.estag@4i.com.br'
   const senha1 = 'estagio4i'
   
