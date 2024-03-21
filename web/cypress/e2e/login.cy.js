@@ -17,7 +17,7 @@ describe('login', () => {
     // Dado que acesso a pagina de login
     cy.visit('https://front.serverest.dev/login')
 
-    // Quando submeto o meu cadastro completo
+    // Quando submeto email e senha corretos
     cy.get('[data-testid="email"]').type('nicolas.qa@4i.com.br')
     cy.get('[data-testid="senha"]').type('estagio4i')
 
@@ -26,5 +26,20 @@ describe('login', () => {
 
     // Entao sou redirecionado para a pagina de produtos
     cy.get('h1').contains('Serverest Store')
+  })
+
+  it('email em branco', () => {
+    // Dado que acesso a pagina de login
+    cy.visit('https://front.serverest.dev/login')
+
+    // Quando submeto senha sem email
+    // cy.get('[data-testid="email"]').type('nicolas.qa@4i.com.br')
+    cy.get('[data-testid="senha"]').type('estagio4i')
+
+    // E clico no botão "entrar"
+    cy.get('[data-testid="entrar"]').click({force: true})
+
+    // Entao vejo um alerta dizendo "Password é obrigatório"
+    cy.get('.alert').contains('Email é obrigatório')
   })
 })
