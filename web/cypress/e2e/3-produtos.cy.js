@@ -16,20 +16,6 @@ describe('produtos', () => {
     //   cy.get('h1').contains('Serverest Store')
     // })
   
-    // it('criando massa de teste 2', () => {
-    //   cy.visit('https://front.serverest.dev/cadastrarusuarios')
-  
-    //   cy.get('[data-testid="nome"]').type('Nicolas Kumabe')
-    //   cy.get('[data-testid="email"]').type(`${email2}`)
-    //   cy.get('[data-testid="password"]').type(`${senha2}`)
-  
-    //   cy.get('[data-testid="cadastrar"]').click({force: true})
-  
-    //   cy.get('.alert').contains('Cadastro realizado com sucesso')
-  
-    //   cy.get('h1').contains('Serverest Store')
-    // })
-  
     it('pesquisando produto com sucesso', () => {
       // Dado que me logo no site Serverest
       cy.visit('https://front.serverest.dev/login')
