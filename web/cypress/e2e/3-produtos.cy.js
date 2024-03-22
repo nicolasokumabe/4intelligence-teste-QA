@@ -1,13 +1,10 @@
 describe('produtos', () => {
-  const email1 = 'nicolas.qa.estag@4i.com.br'
-  const senha1 = 'estagio4i'
-  
     it('criando massa de teste 1', () => {
       cy.visit('https://front.serverest.dev/cadastrarusuarios')
   
       cy.get('[data-testid="nome"]').type('Nicolas Kumabe')
-      cy.get('[data-testid="email"]').type(`${email1}`)
-      cy.get('[data-testid="password"]').type(`${senha1}`)
+      cy.get('[data-testid="email"]').type(Cypress.env('email_5'))
+      cy.get('[data-testid="password"]').type(Cypress.env('senha_5'))
   
       cy.get('[data-testid="cadastrar"]').click({force: true})
   
@@ -19,8 +16,8 @@ describe('produtos', () => {
     it('pesquisando produto com sucesso', () => {
       // Dado que me logo no site Serverest
       cy.visit('https://front.serverest.dev/login')
-      cy.get('[data-testid="email"]').type(`${email1}`)
-      cy.get('[data-testid="senha"]').type(`${senha1}`)
+      cy.get('[data-testid="email"]').type(Cypress.env('email_5'))
+      cy.get('[data-testid="senha"]').type(Cypress.env('senha_5'))
       cy.get('[data-testid="entrar"]').click({force: true})
   
       // Quando sou redirecionado para a pagina de produtos

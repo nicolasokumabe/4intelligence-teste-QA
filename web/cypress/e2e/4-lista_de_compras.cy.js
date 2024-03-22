@@ -1,14 +1,12 @@
 describe('lista de compras', () => {
-  const email1 = 'nicolas.qa.estag@4int.com.br'
-  const senha1 = 'estag4int'
   const produto1 = 'Logitech MX Vertical'
   
     it('criando massa de teste 1', () => {
       cy.visit('https://front.serverest.dev/cadastrarusuarios')
   
       cy.get('[data-testid="nome"]').type('Nicolas Kumabe')
-      cy.get('[data-testid="email"]').type(`${email1}`)
-      cy.get('[data-testid="password"]').type(`${senha1}`)
+      cy.get('[data-testid="email"]').type(Cypress.env('email_6'))
+      cy.get('[data-testid="password"]').type(Cypress.env('senha_6'))
   
       cy.get('[data-testid="cadastrar"]').click({force: true})
   
@@ -20,8 +18,8 @@ describe('lista de compras', () => {
     it('colocando produto na lista de compras', () => {
       // Dado que me logo no site Serverest
       cy.visit('https://front.serverest.dev/login')
-      cy.get('[data-testid="email"]').type(`${email1}`)
-      cy.get('[data-testid="senha"]').type(`${senha1}`)
+      cy.get('[data-testid="email"]').type(Cypress.env('email_6'))
+      cy.get('[data-testid="senha"]').type(Cypress.env('senha_6'))
       cy.get('[data-testid="entrar"]').click({force: true})
 
       // E sou redirecionado para a pagina de produtos
@@ -44,8 +42,8 @@ describe('lista de compras', () => {
     it('aumentando a quantidade do mesmo produto', () => {
       // Dado que estou na lista de compras
       cy.visit('https://front.serverest.dev/login')
-      cy.get('[data-testid="email"]').type(`${email1}`)
-      cy.get('[data-testid="senha"]').type(`${senha1}`)
+      cy.get('[data-testid="email"]').type(Cypress.env('email_6'))
+      cy.get('[data-testid="senha"]').type(Cypress.env('senha_6'))
       cy.get('[data-testid="entrar"]').click({force: true})
       cy.url().should('eq', 'https://front.serverest.dev/home')
       cy.get('h1').contains('Serverest Store')
@@ -66,8 +64,8 @@ describe('lista de compras', () => {
     it('diminuindo a quantidade do mesmo produto', () => {
       // Dado que estou na lista de compras
       cy.visit('https://front.serverest.dev/login')
-      cy.get('[data-testid="email"]').type(`${email1}`)
-      cy.get('[data-testid="senha"]').type(`${senha1}`)
+      cy.get('[data-testid="email"]').type(Cypress.env('email_6'))
+      cy.get('[data-testid="senha"]').type(Cypress.env('senha_6'))
       cy.get('[data-testid="entrar"]').click({force: true})
       cy.url().should('eq', 'https://front.serverest.dev/home')
       cy.get('h1').contains('Serverest Store')
@@ -95,8 +93,8 @@ describe('lista de compras', () => {
     it('limpando a lista', () => {
       // Dado que estou na lista de compras
       cy.visit('https://front.serverest.dev/login')
-      cy.get('[data-testid="email"]').type(`${email1}`)
-      cy.get('[data-testid="senha"]').type(`${senha1}`)
+      cy.get('[data-testid="email"]').type(Cypress.env('email_6'))
+      cy.get('[data-testid="senha"]').type(Cypress.env('senha_6'))
       cy.get('[data-testid="entrar"]').click({force: true})
       cy.url().should('eq', 'https://front.serverest.dev/home')
       cy.get('h1').contains('Serverest Store')
@@ -118,8 +116,8 @@ describe('lista de compras', () => {
     it('adicionando ao carrinho', () => {
       // Dado que estou na lista de compras
       cy.visit('https://front.serverest.dev/login')
-      cy.get('[data-testid="email"]').type(`${email1}`)
-      cy.get('[data-testid="senha"]').type(`${senha1}`)
+      cy.get('[data-testid="email"]').type(Cypress.env('email_6'))
+      cy.get('[data-testid="senha"]').type(Cypress.env('senha_6'))
       cy.get('[data-testid="entrar"]').click({force: true})
       cy.url().should('eq', 'https://front.serverest.dev/home')
       cy.get('h1').contains('Serverest Store')

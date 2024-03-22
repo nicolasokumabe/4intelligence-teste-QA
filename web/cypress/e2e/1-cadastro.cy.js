@@ -5,8 +5,8 @@ describe('cadastro', () => {
 
     // Quando submeto o meu cadastro completo
     cy.get('[data-testid="nome"]').type('Nicolas Kumabe')
-    cy.get('[data-testid="email"]').type('nicolas.k@4i.com.br')
-    cy.get('[data-testid="password"]').type('estagio4i')
+    cy.get('[data-testid="email"]').type(Cypress.env('email_1'))
+    cy.get('[data-testid="password"]').type(Cypress.env('senha_1'))
 
     // E clico no botão "cadastrar"
     cy.get('[data-testid="cadastrar"]').click({force: true})
@@ -23,8 +23,8 @@ describe('cadastro', () => {
     cy.visit('https://front.serverest.dev/cadastrarusuarios')
 
     // Quando submeto o meu cadastro sem nome
-    cy.get('[data-testid="email"]').type('teste@4i.com.br')
-    cy.get('[data-testid="password"]').type('estagio4i')
+    cy.get('[data-testid="email"]').type(Cypress.env('email_2'))
+    cy.get('[data-testid="password"]').type(Cypress.env('senha_2'))
 
     // E clico no botão "cadastrar"
     cy.get('[data-testid="cadastrar"]').click({force: true})
@@ -39,7 +39,7 @@ describe('cadastro', () => {
 
     // Quando submeto o meu cadastro sem nome
     cy.get('[data-testid="nome"]').type('Nicolas Kumabe')
-    cy.get('[data-testid="password"]').type('estagio4i')
+    cy.get('[data-testid="password"]').type(Cypress.env('senha_2'))
 
     // E clico no botão "cadastrar"
     cy.get('[data-testid="cadastrar"]').click({force: true})
@@ -54,7 +54,7 @@ describe('cadastro', () => {
 
     // Quando submeto o meu cadastro sem nome
     cy.get('[data-testid="nome"]').type('Nicolas Kumabe')
-    cy.get('[data-testid="email"]').type('pedro@4i.com.br')
+    cy.get('[data-testid="email"]').type(Cypress.env('email_2'))
 
     // E clico no botão "cadastrar"
     cy.get('[data-testid="cadastrar"]').click({force: true})
