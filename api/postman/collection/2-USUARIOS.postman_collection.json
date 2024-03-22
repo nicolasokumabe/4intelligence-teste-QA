@@ -1,0 +1,2440 @@
+{
+	"info": {
+		"_postman_id": "fa4c34a1-1e88-457a-b6b2-c8cff0fe762c",
+		"name": "2-USUARIOS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29279522"
+	},
+	"item": [
+		{
+			"name": "Criando a massa de testes",
+			"item": [
+				{
+					"name": "Criar usuário 0",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonResponse = JSON.parse(responseBody)",
+									"postman.setEnvironmentVariable(\"user_id_0\",jsonResponse._id)",
+									"",
+									"pm.test(\"Status code deve ser 201\", function(){",
+									"    pm.response.to.have.status(201)",
+									"})",
+									"",
+									"pm.test(\"Valida mensagem de sucesso\", function(){",
+									"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"{{user_nome_0}}\",\n  \"email\": \"{{user_email_0}}\",\n  \"password\": \"{{user_password_0}}\",\n  \"administrador\": \"{{user_administrador_0}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://serverest.dev/usuarios",
+							"protocol": "https",
+							"host": [
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar usuário 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonResponse = JSON.parse(responseBody)",
+									"postman.setEnvironmentVariable(\"user_id_1\",jsonResponse._id)",
+									"",
+									"pm.test(\"Status code deve ser 201\", function(){",
+									"    pm.response.to.have.status(201)",
+									"})",
+									"",
+									"pm.test(\"Valida mensagem de sucesso\", function(){",
+									"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"{{user_nome_1}}\",\n  \"email\": \"{{user_email_1}}\",\n  \"password\": \"{{user_password_1}}\",\n  \"administrador\": \"{{user_administrador_1}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://serverest.dev/usuarios",
+							"protocol": "https",
+							"host": [
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar usuário 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonResponse = JSON.parse(responseBody)",
+									"postman.setEnvironmentVariable(\"user_id_2\",jsonResponse._id)",
+									"",
+									"pm.test(\"Status code deve ser 201\", function(){",
+									"    pm.response.to.have.status(201)",
+									"})",
+									"",
+									"pm.test(\"Valida mensagem de sucesso\", function(){",
+									"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Nicolas\",\n  \"email\": \"nicolas.jr@4intlgnc.com\",\n  \"password\": \"teste\",\n  \"administrador\": \"true\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://serverest.dev/usuarios",
+							"protocol": "https",
+							"host": [
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Testes",
+			"item": [
+				{
+					"name": "CRUD COMPLETO",
+					"item": [
+						{
+							"name": "Cadastrar usuário",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"user_id_CRUD\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 201\", function(){",
+											"    pm.response.to.have.status(201)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"Anderson Silva\",\n  \"email\": \"spider@ufc.com.br\",\n  \"password\": \"PesoLeve\",\n  \"administrador\": \"false\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Buscar usuário",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Nome deve ser Anderson Silva\", function() {",
+											"    pm.expect(jsonResponse.nome).to.eql(\"Anderson Silva\")",
+											"})",
+											"",
+											"pm.test(\"Email deve ser spider@ufc.com.br\", function() {",
+											"    pm.expect(jsonResponse.email).to.eql(\"spider@ufc.com.br\")",
+											"})",
+											"",
+											"pm.test(\"Senha deve ser PesoLeve\", function() {",
+											"    pm.expect(jsonResponse.password).to.eql(\"PesoLeve\")",
+											"})",
+											"",
+											"pm.test(\"Administrador deve ser false\", function() {",
+											"    pm.expect(jsonResponse.administrador).to.eql(\"false\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios/{{user_id_CRUD}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios",
+										"{{user_id_CRUD}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Editar usuário",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Registro alterado com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"Anderson Silva MMA\",\n  \"email\": \"spider@ufc.com.br\",\n  \"password\": \"PesoMedio\",\n  \"administrador\": \"true\"\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios/{{user_id_CRUD}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios",
+										"{{user_id_CRUD}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Excluir usuário",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Registro excluído com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/usuarios/{{user_id_CRUD}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios",
+										"{{user_id_CRUD}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "Teste padrão",
+							"item": [
+								{
+									"name": "Usuário cadastrado com sucesso",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"postman.setEnvironmentVariable(\"user_id_POST\",jsonResponse._id)",
+													"",
+													"pm.test(\"Status code deve ser 201\", function(){",
+													"    pm.response.to.have.status(201)",
+													"})",
+													"",
+													"pm.test(\"Valida mensagem de sucesso\", function(){",
+													"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"{{user_nome_POST}}\",\n  \"email\": \"{{user_email_POST}}\",\n  \"password\": \"{{user_password_POST}}\",\n  \"administrador\": \"{{user_administrador_POST}}\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://serverest.dev/usuarios",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"usuarios"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Excluir usuário",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function(){",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"Valida mensagem de sucesso\", function(){",
+													"    pm.expect(jsonResponse.message).to.equal(\"Registro excluído com sucesso\")",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/usuarios/{{user_id_POST}}",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"usuarios",
+												"{{user_id_POST}}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Nome em branco",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.nome).to.equal(\"nome não pode ficar em branco\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"\",\n  \"email\": \"{{user_email_POST}}\",\n  \"password\": \"{{user_password_POST}}\",\n  \"administrador\": \"{{user_administrador_POST}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sem o campo nome",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"user_id_POST\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.nome).to.equal(\"nome é obrigatório\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"{{user_email_POST}}\",\n  \"password\": \"{{user_password_POST}}\",\n  \"administrador\": \"{{user_administrador_POST}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Formato de email errado",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"user_id_POST\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.email).to.equal(\"email deve ser um email válido\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"{{user_nome_POST}}\",\n  \"email\": \"*****\",\n  \"password\": \"{{user_password_POST}}\",\n  \"administrador\": \"{{user_administrador_POST}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Email em branco",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"user_id_POST\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.email).to.equal(\"email não pode ficar em branco\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"{{user_nome_POST}}\",\n  \"email\": \"\",\n  \"password\": \"{{user_password_POST}}\",\n  \"administrador\": \"{{user_administrador_POST}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sem o campo email",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"user_id_POST\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.email).to.equal(\"email é obrigatório\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"{{user_nome_POST}}\",\n  \"password\": \"{{user_password_POST}}\",\n  \"administrador\": \"{{user_administrador_POST}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Senha em branco",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"user_id_POST\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.password).to.equal(\"password não pode ficar em branco\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"{{user_nome_POST}}\",\n  \"email\": \"{{user_email_POST}}\",\n  \"password\": \"\",\n  \"administrador\": \"{{user_administrador_POST}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sem o campo senha",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"user_id_POST\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.password).to.equal(\"password é obrigatório\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"{{user_nome_POST}}\",\n  \"email\": \"{{user_email_POST}}\",\n  \"administrador\": \"{{user_administrador_POST}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Dado de administrador inválido",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"user_id_POST\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.administrador).to.equal(\"administrador deve ser 'true' ou 'false'\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"{{user_nome_POST}}\",\n  \"email\": \"{{user_email_POST}}\",\n  \"password\": \"{{user_password_POST}}\",\n  \"administrador\": \"0\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Administrador em branco",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"user_id_POST\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.administrador).to.equal(\"administrador deve ser 'true' ou 'false'\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"{{user_nome_POST}}\",\n  \"email\": \"{{user_email_POST}}\",\n  \"password\": \"{{user_password_POST}}\",\n  \"administrador\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sem o campo administrador",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"user_id_POST\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.administrador).to.equal(\"administrador é obrigatório\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"{{user_nome_POST}}\",\n  \"email\": \"{{user_email_POST}}\",\n  \"password\": \"{{user_password_POST}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "GET /usuarios",
+							"item": [
+								{
+									"name": "Listar usuários cadastrados",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function(){",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"jsonResponse.usuarios.forEach(function(usuario) {",
+													"    pm.test(\"Usuário: \" + usuario.nome, function() {",
+													"        pm.expect(usuario).to.have.property(\"nome\")",
+													"        pm.expect(usuario).to.have.property(\"email\")",
+													"        pm.expect(usuario).to.have.property(\"password\")",
+													"        pm.expect(usuario).to.have.property(\"administrador\")",
+													"        pm.expect(usuario).to.have.property(\"_id\")",
+													"    })",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/usuarios",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"usuarios"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "xyz",
+													"disabled": true
+												},
+												{
+													"key": "nome",
+													"value": "a",
+													"disabled": true
+												},
+												{
+													"key": "email",
+													"value": "@qacoders",
+													"disabled": true
+												},
+												{
+													"key": "password",
+													"value": "y",
+													"disabled": true
+												},
+												{
+													"key": "administrador",
+													"value": "true'",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Filtrar por ID",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function(){",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"Quantidade de usuários deve ser igual a 1\", function() {",
+													"    pm.expect(jsonResponse.quantidade).to.eql(1)",
+													"})",
+													"",
+													"pm.test(\"Validar usuário único\", function() {",
+													"    var usuario = jsonResponse.usuarios[0]",
+													"    pm.expect(usuario.nome).to.eql(pm.environment.get(\"user_nome_1\"))",
+													"    pm.expect(usuario.email).to.eql(pm.environment.get(\"user_email_1\"))",
+													"    pm.expect(usuario.password).to.eql(pm.environment.get(\"user_password_1\"))",
+													"    pm.expect(usuario.administrador).to.eql(pm.environment.get(\"user_administrador_1\"))",
+													"})",
+													"",
+													"// pm.test(\"Validar usuário único\", function() {",
+													"//     var usuario = jsonResponse.usuarios[0]",
+													"//     pm.expect(usuario.nome).to.eql(\"Aristóteles\")",
+													"//     pm.expect(usuario.email).to.eql(\"aristoteles.g@greece.com.br\")",
+													"//     pm.expect(usuario.password).to.eql(\"384ac\")",
+													"//     pm.expect(usuario.administrador).to.eql(\"true\")",
+													"//     pm.expect(usuario._id).to.eql(\"zHCwNb1BT3Xz1oS3\")",
+													"// })"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/usuarios?_id={{user_id_1}}",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"usuarios"
+											],
+											"query": [
+												{
+													"key": "nome",
+													"value": "a",
+													"disabled": true
+												},
+												{
+													"key": "email",
+													"value": "@qacoders",
+													"disabled": true
+												},
+												{
+													"key": "password",
+													"value": "y",
+													"disabled": true
+												},
+												{
+													"key": "administrador",
+													"value": "true'",
+													"disabled": true
+												},
+												{
+													"key": "_id",
+													"value": "{{user_id_1}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ID inexistente",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function(){",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"Quantidade de usuários deve ser igual a 0\", function() {",
+													"    pm.expect(jsonResponse.quantidade).to.eql(0)",
+													"})",
+													"",
+													"pm.test(\"Lista de usuários deve estar vazia\", function() {",
+													"    pm.expect(jsonResponse.usuarios).to.be.empty",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/usuarios?_id=123456",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"usuarios"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "123456"
+												},
+												{
+													"key": "nome",
+													"value": "a",
+													"disabled": true
+												},
+												{
+													"key": "email",
+													"value": "@qacoders",
+													"disabled": true
+												},
+												{
+													"key": "password",
+													"value": "y",
+													"disabled": true
+												},
+												{
+													"key": "administrador",
+													"value": "true'",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Filtrar por nome",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function(){",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"Quantidade de usuários maior que 0\", function() {",
+													"    pm.expect(jsonResponse.quantidade).to.be.above(0)",
+													"})",
+													"",
+													"pm.test(\"Todos os usuários possuem nomes com a letra 'a'\", function() {",
+													"    jsonResponse.usuarios.forEach(function(usuario) {",
+													"        pm.expect(usuario.nome.toLowerCase()).to.include('a')",
+													"    })",
+													"})",
+													"",
+													"jsonResponse.usuarios.forEach(function(usuario) {",
+													"    pm.test(\"Usuário: \" + usuario.nome, function() {",
+													"        pm.expect(usuario).to.have.property(\"nome\")",
+													"        pm.expect(usuario).to.have.property(\"email\")",
+													"        pm.expect(usuario).to.have.property(\"password\")",
+													"        pm.expect(usuario).to.have.property(\"administrador\")",
+													"        pm.expect(usuario).to.have.property(\"_id\")",
+													"    })",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/usuarios?nome=a",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"usuarios"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "nome",
+													"value": "a"
+												},
+												{
+													"key": "email",
+													"value": "@qacoders",
+													"disabled": true
+												},
+												{
+													"key": "password",
+													"value": "y",
+													"disabled": true
+												},
+												{
+													"key": "administrador",
+													"value": "true'",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Nome inexistente",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function(){",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"Quantidade de usuários deve ser igual a 0\", function() {",
+													"    pm.expect(jsonResponse.quantidade).to.eql(0)",
+													"})",
+													"",
+													"pm.test(\"Lista de usuários deve estar vazia\", function() {",
+													"    pm.expect(jsonResponse.usuarios).to.be.empty",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/usuarios?nome=zero",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"usuarios"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "nome",
+													"value": "zero"
+												},
+												{
+													"key": "email",
+													"value": "@qacoders",
+													"disabled": true
+												},
+												{
+													"key": "password",
+													"value": "y",
+													"disabled": true
+												},
+												{
+													"key": "administrador",
+													"value": "true'",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Filtrar por email",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function(){",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"Quantidade de usuários deve ser igual a 1\", function() {",
+													"    pm.expect(jsonResponse.quantidade).to.eql(1)",
+													"})",
+													"",
+													"pm.test(\"Validar usuário único\", function() {",
+													"    var usuario = jsonResponse.usuarios[0]",
+													"    pm.expect(usuario.nome).to.eql(pm.environment.get(\"user_nome_1\"))",
+													"    pm.expect(usuario.email).to.eql(pm.environment.get(\"user_email_1\"))",
+													"    pm.expect(usuario.password).to.eql(pm.environment.get(\"user_password_1\"))",
+													"    pm.expect(usuario.administrador).to.eql(pm.environment.get(\"user_administrador_1\"))",
+													"})",
+													"",
+													"// pm.test(\"Validar usuário único\", function() {",
+													"//     var usuario = jsonResponse.usuarios[0]",
+													"//     pm.expect(usuario.nome).to.eql(\"Aristóteles\")",
+													"//     pm.expect(usuario.email).to.eql(\"aristoteles.g@greece.com.br\")",
+													"//     pm.expect(usuario.password).to.eql(\"384ac\")",
+													"//     pm.expect(usuario.administrador).to.eql(\"true\")",
+													"//     pm.expect(usuario._id).to.eql(\"zHCwNb1BT3Xz1oS3\")",
+													"// })"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/usuarios?email={{user_email_1}}",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"usuarios"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "nome",
+													"value": "a",
+													"disabled": true
+												},
+												{
+													"key": "password",
+													"value": "y",
+													"disabled": true
+												},
+												{
+													"key": "administrador",
+													"value": "true'",
+													"disabled": true
+												},
+												{
+													"key": "email",
+													"value": "{{user_email_1}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Email inexistente",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function(){",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"Quantidade de usuários deve ser igual a 0\", function() {",
+													"    pm.expect(jsonResponse.quantidade).to.eql(0)",
+													"})",
+													"",
+													"pm.test(\"Lista de usuários deve estar vazia\", function() {",
+													"    pm.expect(jsonResponse.usuarios).to.be.empty",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/usuarios?email=email@inexistente.com",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"usuarios"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "nome",
+													"value": "a",
+													"disabled": true
+												},
+												{
+													"key": "email",
+													"value": "email@inexistente.com"
+												},
+												{
+													"key": "password",
+													"value": "y",
+													"disabled": true
+												},
+												{
+													"key": "administrador",
+													"value": "true'",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Filtrar por password",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function(){",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"Quantidade de usuários maior que 0\", function() {",
+													"    pm.expect(jsonResponse.quantidade).to.be.above(0)",
+													"})",
+													"",
+													"pm.test(\"Todos os usuários possuem senha com a letra 'e'\", function() {",
+													"    jsonResponse.usuarios.forEach(function(usuario) {",
+													"        pm.expect(usuario.password.toLowerCase()).to.include('e')",
+													"    })",
+													"})",
+													"",
+													"jsonResponse.usuarios.forEach(function(usuario) {",
+													"    pm.test(\"Usuário: \" + usuario.nome, function() {",
+													"        pm.expect(usuario).to.have.property(\"nome\")",
+													"        pm.expect(usuario).to.have.property(\"email\")",
+													"        pm.expect(usuario).to.have.property(\"password\")",
+													"        pm.expect(usuario).to.have.property(\"administrador\")",
+													"        pm.expect(usuario).to.have.property(\"_id\")",
+													"    })",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/usuarios?password=e",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"usuarios"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "nome",
+													"value": "a",
+													"disabled": true
+												},
+												{
+													"key": "email",
+													"value": "aristoteles@grecia.com",
+													"disabled": true
+												},
+												{
+													"key": "password",
+													"value": "e"
+												},
+												{
+													"key": "administrador",
+													"value": "true'",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Password inexistente",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function(){",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"Quantidade de usuários deve ser igual a 0\", function() {",
+													"    pm.expect(jsonResponse.quantidade).to.eql(0)",
+													"})",
+													"",
+													"pm.test(\"Lista de usuários deve estar vazia\", function() {",
+													"    pm.expect(jsonResponse.usuarios).to.be.empty",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/usuarios?password=abcdef",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"usuarios"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "nome",
+													"value": "a",
+													"disabled": true
+												},
+												{
+													"key": "email",
+													"value": "aristoteles@grecia.com",
+													"disabled": true
+												},
+												{
+													"key": "password",
+													"value": "abcdef"
+												},
+												{
+													"key": "administrador",
+													"value": "true'",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Filtrar por administrador",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function(){",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"Quantidade de usuários maior que 0\", function() {",
+													"    pm.expect(jsonResponse.quantidade).to.be.above(0)",
+													"})",
+													"",
+													"pm.test(\"Todos os usuários possuem administrador como 'true'\", function() {",
+													"    jsonResponse.usuarios.forEach(function(usuario) {",
+													"        pm.expect(usuario.administrador.toLowerCase()).to.include('true')",
+													"    })",
+													"})",
+													"",
+													"jsonResponse.usuarios.forEach(function(usuario) {",
+													"    pm.test(\"Usuário: \" + usuario.nome, function() {",
+													"        pm.expect(usuario).to.have.property(\"nome\")",
+													"        pm.expect(usuario).to.have.property(\"email\")",
+													"        pm.expect(usuario).to.have.property(\"password\")",
+													"        pm.expect(usuario).to.have.property(\"administrador\")",
+													"        pm.expect(usuario).to.have.property(\"_id\")",
+													"    })",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/usuarios?administrador=true",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"usuarios"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "nome",
+													"value": "a",
+													"disabled": true
+												},
+												{
+													"key": "email",
+													"value": "aristoteles@grecia.com",
+													"disabled": true
+												},
+												{
+													"key": "password",
+													"value": "y",
+													"disabled": true
+												},
+												{
+													"key": "administrador",
+													"value": "true"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Administrador nulo",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 400\", function(){",
+													"    pm.response.to.have.status(400)",
+													"})",
+													"",
+													"pm.test(\"Valida mensagem de sucesso\", function(){",
+													"    pm.expect(jsonResponse.administrador).to.equal(\"administrador deve ser 'true' ou 'false'\")",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/usuarios?administrador=",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"usuarios"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "nome",
+													"value": "a",
+													"disabled": true
+												},
+												{
+													"key": "email",
+													"value": "aristoteles@grecia.com",
+													"disabled": true
+												},
+												{
+													"key": "password",
+													"value": "y",
+													"disabled": true
+												},
+												{
+													"key": "administrador",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "GET /usuarios/{_id}",
+							"item": [
+								{
+									"name": "Buscar usuário por ID",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function(){",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"Validar usuário único\", function() {",
+													"    pm.expect(jsonResponse.nome).to.eql(pm.environment.get(\"user_nome_0\"))",
+													"    pm.expect(jsonResponse.email).to.eql(pm.environment.get(\"user_email_0\"))",
+													"    pm.expect(jsonResponse.password).to.eql(pm.environment.get(\"user_password_0\"))",
+													"    pm.expect(jsonResponse.administrador).to.eql(pm.environment.get(\"user_administrador_0\"))",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://serverest.dev/usuarios/{{user_id_0}}",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"usuarios",
+												"{{user_id_0}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Usuário inexistente",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 400\", function(){",
+													"    pm.response.to.have.status(400)",
+													"})",
+													"",
+													"pm.test(\"Valida mensagem de sucesso\", function(){",
+													"    pm.expect(jsonResponse.message).to.equal(\"Usuário não encontrado\")",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://serverest.dev/usuarios/0000000",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"usuarios",
+												"0000000"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "Usuário editado com sucesso",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Registro alterado com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"{{user_nome_PUT}}\",\n  \"email\": \"{{user_email_1}}\",\n  \"password\": \"{{user_password_PUT}}\",\n  \"administrador\": \"{{user_administrador_PUT}}\"\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios/{{user_id_1}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios",
+										"{{user_id_1}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pesquisa sem ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 405\", function(){",
+											"    pm.response.to.have.status(405)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de erro\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Não é possível realizar PUT em /usuarios/. Acesse https://serverest.dev para ver as rotas disponíveis e como utilizá-las.\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"{{user_nome_PUT}}\",\n  \"email\": \"{{user_email_1}}\",\n  \"password\": \"{{user_password_PUT}}\",\n  \"administrador\": \"{{user_administrador_PUT}}\"\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios/",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Email usado",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de erro\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Este email já está sendo usado\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"{{user_nome_PUT}}\",\n  \"email\": \"{{user_email_0}}\",\n  \"password\": \"{{user_password_PUT}}\",\n  \"administrador\": \"{{user_administrador_PUT}}\"\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios/{{user_id_2}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios",
+										"{{user_id_2}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "Usuário deletado com sucesso",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Registro excluído com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/usuarios/{{user_id_0}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios",
+										"{{user_id_0}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sem o ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 405\", function(){",
+											"    pm.response.to.have.status(405)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de erro\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Não é possível realizar DELETE em /usuarios/. Acesse https://serverest.dev para ver as rotas disponíveis e como utilizá-las.\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/usuarios/",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ID errado",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de erro\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Nenhum registro excluído\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/usuarios/0000000",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios",
+										"0000000"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Deletando massa de teste",
+			"item": [
+				{
+					"name": "Excluir usuário 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonResponse = JSON.parse(responseBody)",
+									"",
+									"pm.test(\"Status code deve ser 200\", function(){",
+									"    pm.response.to.have.status(200)",
+									"})",
+									"",
+									"pm.test(\"Valida mensagem de sucesso\", function(){",
+									"    pm.expect(jsonResponse.message).to.equal(\"Registro excluído com sucesso\")",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://serverest.dev/usuarios/{{user_id_1}}",
+							"protocol": "https",
+							"host": [
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios",
+								"{{user_id_1}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir usuário 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonResponse = JSON.parse(responseBody)",
+									"",
+									"pm.test(\"Status code deve ser 200\", function(){",
+									"    pm.response.to.have.status(200)",
+									"})",
+									"",
+									"pm.test(\"Valida mensagem de sucesso\", function(){",
+									"    pm.expect(jsonResponse.message).to.equal(\"Registro excluído com sucesso\")",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://serverest.dev/usuarios/{{user_id_2}}",
+							"protocol": "https",
+							"host": [
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios",
+								"{{user_id_2}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

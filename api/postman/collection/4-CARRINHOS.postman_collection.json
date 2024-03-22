@@ -1,0 +1,3578 @@
+{
+	"info": {
+		"_postman_id": "c52573ac-ca88-464e-acf9-0dafc9e9b68f",
+		"name": "4-CARRINHOS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29279522"
+	},
+	"item": [
+		{
+			"name": "Criando a massa de testes",
+			"item": [
+				{
+					"name": "Usuário 0",
+					"item": [
+						{
+							"name": "Criar usuário",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"user_id_0\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 201\", function(){",
+											"    pm.response.to.have.status(201)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"Nicolas O Kumabe\",\n  \"email\": \"{{prod_email_0}}\",\n  \"password\": \"{{prod_password_0}}\",\n  \"administrador\": \"true\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"auth_token_0\",jsonResponse.authorization)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Login realizado com sucesso\")",
+											"})",
+											"",
+											"pm.test(\"Valida se há token de autorização\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"authorization\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"{{prod_email_0}}\",\n  \"password\": \"{{prod_password_0}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/login",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Produto 0",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"prod_id_0\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 201\", function(){",
+											"    pm.response.to.have.status(201)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+											"})",
+											"",
+											"pm.test(\"Valida se retorna o _id\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"_id\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_0}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"O Príncipe...\",\n  \"preco\": 20,\n  \"descricao\": \"Livro\",\n  \"quantidade\": 50\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/produtos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Produto 1",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"prod_id_1\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 201\", function(){",
+											"    pm.response.to.have.status(201)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+											"})",
+											"",
+											"pm.test(\"Valida se retorna o _id\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"_id\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_0}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"Código limpo...\",\n  \"preco\": 91,\n  \"descricao\": \"Livro\",\n  \"quantidade\": 4\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/produtos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Usuário 1",
+					"item": [
+						{
+							"name": "Criar usuário",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"user_id_1\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 201\", function(){",
+											"    pm.response.to.have.status(201)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"Vinicius Júnior\",\n  \"email\": \"{{prod_email_1}}\",\n  \"password\": \"{{prod_password_1}}\",\n  \"administrador\": \"true\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"auth_token_1\",jsonResponse.authorization)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Login realizado com sucesso\")",
+											"})",
+											"",
+											"pm.test(\"Valida se há token de autorização\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"authorization\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"{{prod_email_1}}\",\n  \"password\": \"{{prod_password_1}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/login",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Produto 2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"prod_id_2\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 201\", function(){",
+											"    pm.response.to.have.status(201)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+											"})",
+											"",
+											"pm.test(\"Valida se retorna o _id\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"_id\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_1}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"Introdução à Linguagem SQL...\",\n  \"preco\": 51,\n  \"descricao\": \"Livro\",\n  \"quantidade\": 300\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/produtos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Usuário 2",
+					"item": [
+						{
+							"name": "Criar usuário",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"user_id_2\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 201\", function(){",
+											"    pm.response.to.have.status(201)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"Rodrigo\",\n  \"email\": \"{{prod_email_2}}\",\n  \"password\": \"{{prod_password_2}}\",\n  \"administrador\": \"true\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"auth_token_2\",jsonResponse.authorization)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Login realizado com sucesso\")",
+											"})",
+											"",
+											"pm.test(\"Valida se há token de autorização\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"authorization\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"{{prod_email_2}}\",\n  \"password\": \"{{prod_password_2}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/login",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Produto 3",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"prod_id_3\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 201\", function(){",
+											"    pm.response.to.have.status(201)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+											"})",
+											"",
+											"pm.test(\"Valida se retorna o _id\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"_id\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_2}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"O poder do hábito...\",\n  \"preco\": 35,\n  \"descricao\": \"Livro\",\n  \"quantidade\": 2\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/produtos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Carrinho",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"cart_id_2\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 201\", function(){",
+											"    pm.response.to.have.status(201)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+											"})",
+											"",
+											"pm.test(\"Valida se retorna o _id\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"_id\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_2}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": \"{{prod_id_3}}\",\n      \"quantidade\": 1\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/carrinhos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Usuário 3",
+					"item": [
+						{
+							"name": "Criar usuário",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"user_id_3\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 201\", function(){",
+											"    pm.response.to.have.status(201)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"Endrick\",\n  \"email\": \"{{prod_email_3}}\",\n  \"password\": \"{{prod_password_3}}\",\n  \"administrador\": \"true\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/usuarios",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"auth_token_3\",jsonResponse.authorization)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Login realizado com sucesso\")",
+											"})",
+											"",
+											"pm.test(\"Valida se há token de autorização\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"authorization\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"{{prod_email_3}}\",\n  \"password\": \"{{prod_password_3}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://serverest.dev/login",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Produto 4",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"prod_id_4\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 201\", function(){",
+											"    pm.response.to.have.status(201)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+											"})",
+											"",
+											"pm.test(\"Valida se retorna o _id\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"_id\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_3}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"Rápido e devagar: Duas formas de pensar...\",\n  \"preco\": 70,\n  \"descricao\": \"Livro\",\n  \"quantidade\": 2\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/produtos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Carrinho",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"cart_id_3\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 201\", function(){",
+											"    pm.response.to.have.status(201)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+											"})",
+											"",
+											"pm.test(\"Valida se retorna o _id\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"_id\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_3}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": \"{{prod_id_4}}\",\n      \"quantidade\": 1\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/carrinhos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Testes",
+			"item": [
+				{
+					"name": "PROCESSO COMPLETO",
+					"item": [
+						{
+							"name": "Cadastrar carrinho",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"cart_id_0\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 201\", function(){",
+											"    pm.response.to.have.status(201)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+											"})",
+											"",
+											"pm.test(\"Valida se retorna o _id\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"_id\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_0}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": \"{{prod_id_0}}\",\n      \"quantidade\": 1\n    },\n    {\n      \"idProduto\": \"{{prod_id_1}}\",\n      \"quantidade\": 1\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/carrinhos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Buscar carrinho",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"var produtos = jsonResponse.produtos",
+											"var precoTotal = jsonResponse.precoTotal",
+											"",
+											"var precoTotalCalculado = produtos.reduce(function(acumulador, produto) {",
+											"    return acumulador + (produto.quantidade * produto.precoUnitario)",
+											"}, 0)",
+											"",
+											"pm.test(\"Preço total está correto\", function() {",
+											"    pm.expect(precoTotal).to.equal(precoTotalCalculado)",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/carrinhos/{{cart_id_0}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos",
+										"{{cart_id_0}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancelar compra",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Verifica se a descrição é obrigatória\", function() {",
+											"    pm.expect(jsonResponse.message).to.equal(\"Registro excluído com sucesso. Estoque dos produtos reabastecido\")",
+											"})",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_0}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/carrinhos/cancelar-compra",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos",
+										"cancelar-compra"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cadastrar segundo carrinho",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"cart_id_0\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 201\", function(){",
+											"    pm.response.to.have.status(201)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+											"})",
+											"",
+											"pm.test(\"Valida se retorna o _id\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"_id\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_0}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": \"{{prod_id_0}}\",\n      \"quantidade\": 1\n    },\n    {\n      \"idProduto\": \"{{prod_id_1}}\",\n      \"quantidade\": 1\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/carrinhos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Retornar produto ao estoque",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Verifica se a descrição é obrigatória\", function() {",
+											"    pm.expect(jsonResponse.message).to.equal(\"Registro excluído com sucesso\")",
+											"})",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_0}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/carrinhos/concluir-compra",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos",
+										"concluir-compra"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "Carrinho cadastrado com sucesso",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"cart_id_1\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 201\", function(){",
+											"    pm.response.to.have.status(201)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+											"})",
+											"",
+											"pm.test(\"Valida se retorna o _id\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"_id\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_1}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": \"{{prod_id_2}}\",\n      \"quantidade\": 1\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/carrinhos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sem token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"cart_id_1\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 201\", function(){",
+											"    pm.response.to.have.status(201)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Token de acesso ausente, inválido, expirado ou usuário do token não existe mais\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_0}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": \"{{prod_id_1}}\",\n      \"quantidade\": 3\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/carrinhos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "IdProduto vazio",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"cart_id_1\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 401\", function(){",
+											"    pm.response.to.have.status(401)",
+											"})",
+											"",
+											"pm.test(\"Erro relacionado aos produtos\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"produtos\")",
+											"    pm.expect(jsonResponse[\"produtos\"]).to.equal(\"produtos não contém 1 valor obrigatório\")",
+											"})",
+											"",
+											"pm.test(\"Erro relacionado aos IDs dos produtos\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"produtos[0].idProduto\")",
+											"    pm.expect(jsonResponse[\"produtos[0].idProduto\"]).to.equal(\"produtos[0].idProduto não pode ficar em branco\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_1}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": \"\",\n      \"quantidade\": 3\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/carrinhos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cancelar compra",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Verifica se a descrição é obrigatória\", function() {",
+											"    pm.expect(jsonResponse.message).to.equal(\"Registro excluído com sucesso. Estoque dos produtos reabastecido\")",
+											"})",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_1}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/carrinhos/cancelar-compra",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos",
+										"cancelar-compra"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "IdProduto inexistente",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"cart_id_1\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Verifica se o produto não foi encontrado\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"message\")",
+											"    pm.expect(jsonResponse.message).to.equal(\"Produto não encontrado\")",
+											"})",
+											"",
+											"pm.test(\"Verifica os detalhes do item\", function() {",
+											"    pm.expect(jsonResponse).to.have.property(\"item\")",
+											"    pm.expect(jsonResponse.item).to.eql({",
+											"        \"idProduto\": \"0000000\",",
+											"        \"quantidade\": 3,",
+											"        \"index\": 0",
+											"    })",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_1}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": \"0000000\",\n      \"quantidade\": 3\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/carrinhos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "IdProduto como inteiro",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"cart_id_1\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Verifica se a mensagem de erro para produtos[0].idProduto está correta\", function() {",
+											"    pm.expect(jsonResponse[\"produtos[0].idProduto\"]).to.equal(\"produtos[0].idProduto deve ser uma string\")",
+											"})",
+											"",
+											"pm.test(\"Verifica se a mensagem de erro para produtos está correta\", function() {",
+											"    pm.expect(jsonResponse.produtos).to.equal(\"produtos não contém 1 valor obrigatório\")",
+											"})",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_1}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": 123456,\n      \"quantidade\": 3\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/carrinhos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sem o campo IdProduto",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"cart_id_1\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Verifica se a mensagem de erro para produtos[0].idProduto está correta\", function() {",
+											"    pm.expect(jsonResponse[\"produtos[0].idProduto\"]).to.equal(\"produtos[0].idProduto é obrigatório\")",
+											"})",
+											"",
+											"pm.test(\"Verifica se a mensagem de erro para produtos está correta\", function() {",
+											"    pm.expect(jsonResponse.produtos).to.equal(\"produtos não contém 1 valor obrigatório\")",
+											"})",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_1}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtos\": [\n    {\n      \"quantidade\": 3\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/carrinhos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sem o campo descrição",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"prod_id_1\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de erro\", function() {",
+											"    pm.expect(jsonResponse.descricao).to.equal(\"descricao é obrigatório\")",
+											"})",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_1}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"As 48 leis do poder\",\n  \"preco\": 30,\n  \"quantidade\": 50\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/produtos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Quantidade com valor negativo",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"cart_id_1\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Verifica se a quantidade do primeiro produto é um número positivo\", function() {",
+											"    pm.expect(jsonResponse[\"produtos[0].quantidade\"]).to.equal(\"produtos[0].quantidade deve ser um número positivo\")",
+											"})",
+											"",
+											"pm.test(\"Verifica se há pelo menos um produto obrigatório\", function() {",
+											"    pm.expect(jsonResponse.produtos).to.equal(\"produtos não contém 1 valor obrigatório\")",
+											"})",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_1}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": \"{{prod_id_1}}\",\n      \"quantidade\": -100\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/carrinhos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Quantidade com valor alfanumérico",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"cart_id_1\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Verifica se a quantidade do primeiro produto é um número\", function() {",
+											"    pm.expect(jsonResponse[\"produtos[0].quantidade\"]).to.equal(\"produtos[0].quantidade deve ser um número\")",
+											"})",
+											"",
+											"pm.test(\"Verifica se há pelo menos um produto obrigatório\", function() {",
+											"    pm.expect(jsonResponse.produtos).to.equal(\"produtos não contém 1 valor obrigatório\")",
+											"})",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_1}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": \"{{prod_id_1}}\",\n      \"quantidade\": \"abc123\"\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/carrinhos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Quantidade com valor zero",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"cart_id_1\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Verifica se a quantidade do primeiro produto é um número positivo\", function() {",
+											"    pm.expect(jsonResponse[\"produtos[0].quantidade\"]).to.equal(\"produtos[0].quantidade deve ser um número positivo\")",
+											"})",
+											"",
+											"pm.test(\"Verifica se há pelo menos um produto obrigatório\", function() {",
+											"    pm.expect(jsonResponse.produtos).to.equal(\"produtos não contém 1 valor obrigatório\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_1}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": \"{{prod_id_1}}\",\n      \"quantidade\": 0\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/carrinhos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sem o campo quantidade",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"postman.setEnvironmentVariable(\"cart_id_1\",jsonResponse._id)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function(){",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"Verifica se a quantidade do primeiro produto é obrigatória\", function() {",
+											"    pm.expect(jsonResponse[\"produtos[0].quantidade\"]).to.equal(\"produtos[0].quantidade é obrigatório\")",
+											"})",
+											"",
+											"pm.test(\"Verifica se há pelo menos um produto obrigatório\", function() {",
+											"    pm.expect(jsonResponse.produtos).to.equal(\"produtos não contém 1 valor obrigatório\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_1}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": \"{{prod_id_1}}\"\n    }\n  ]\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/carrinhos",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "GET /carrinhos",
+							"item": [
+								{
+									"name": "Listar carrinhos cadastrados",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 201\", function() {",
+													"    pm.response.to.have.status(201)",
+													"})",
+													"",
+													"pm.test(\"Resposta contém dados\", function() {",
+													"    pm.expect(jsonResponse).to.not.be.empty",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/carrinhos",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"carrinhos"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "{{cart_id_2}}",
+													"disabled": true
+												},
+												{
+													"key": "precoTotal",
+													"value": "51",
+													"disabled": true
+												},
+												{
+													"key": "quantidadeTotal",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "idUsuario",
+													"value": "{{user_id_2}}",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Filtrar por ID",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function() {",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"Resposta contém dados\", function() {",
+													"    pm.expect(jsonResponse).to.not.be.empty",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/carrinhos?_id={{cart_id_2}}",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"carrinhos"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "{{cart_id_2}}"
+												},
+												{
+													"key": "precoTotal",
+													"value": "51",
+													"disabled": true
+												},
+												{
+													"key": "quantidadeTotal",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "idUsuario",
+													"value": "{{user_id_2}}",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ID inexistente",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 201\", function() {",
+													"    pm.response.to.have.status(201)",
+													"})",
+													"",
+													"pm.test(\"Resposta está vazia\", function() {",
+													"    pm.expect(jsonResponse.quantidade).to.equal(0)",
+													"    pm.expect(jsonResponse.carrinhos).to.be.empty",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/carrinhos?_id=123456",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"carrinhos"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "123456"
+												},
+												{
+													"key": "precoTotal",
+													"value": "51",
+													"disabled": true
+												},
+												{
+													"key": "quantidadeTotal",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "idUsuario",
+													"value": "{{user_id_2}}",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Filtrar por preço total",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 201\", function() {",
+													"    pm.response.to.have.status(201)",
+													"})",
+													"",
+													"pm.test(\"Resposta contém carrinhos\", function() {",
+													"    pm.expect(jsonResponse.quantidade).to.be.above(0)",
+													"    pm.expect(jsonResponse.carrinhos.length).to.be.above(0)",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/carrinhos?precoTotal=35",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"carrinhos"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "{{cart_id_2}}",
+													"disabled": true
+												},
+												{
+													"key": "precoTotal",
+													"value": "35"
+												},
+												{
+													"key": "quantidadeTotal",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "idUsuario",
+													"value": "{{user_id_2}}",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Preço total negativo",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody);",
+													"",
+													"pm.test(\"Status code deve ser 400\", function() {",
+													"    pm.response.to.have.status(400)",
+													"})",
+													"",
+													"pm.test(\"Mensagem de erro deve ser 'precoTotal deve ser um número positivo'\", function() {",
+													"    pm.expect(jsonResponse.precoTotal).to.equal(\"precoTotal deve ser um número positivo\")",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/carrinhos?precoTotal=-50",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"carrinhos"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "{{cart_id_2}}",
+													"disabled": true
+												},
+												{
+													"key": "precoTotal",
+													"value": "-50"
+												},
+												{
+													"key": "quantidadeTotal",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "idUsuario",
+													"value": "{{user_id_2}}",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Filtrar por quantidade total",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function() {",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"A resposta não deve estar vazia\", function() {",
+													"    pm.expect(jsonResponse.quantidade).to.be.above(0)",
+													"})",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/carrinhos?quantidadeTotal=1",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"carrinhos"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "{{cart_id_2}}",
+													"disabled": true
+												},
+												{
+													"key": "precoTotal",
+													"value": "51",
+													"disabled": true
+												},
+												{
+													"key": "quantidadeTotal",
+													"value": "1"
+												},
+												{
+													"key": "idUsuario",
+													"value": "{{user_id_2}}",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Quantidade total negativa",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody);",
+													"",
+													"pm.test(\"Status code deve ser 200\", function() {",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"Mensagem de erro deve ser 'quantidadeTotal deve ser um número positivo'\", function() {",
+													"    pm.expect(jsonResponse.quantidadeTotal).to.equal(\"quantidadeTotal deve ser um número positivo\")",
+													"})",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/carrinhos?quantidadeTotal=-500",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"carrinhos"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "{{cart_id_2}}",
+													"disabled": true
+												},
+												{
+													"key": "precoTotal",
+													"value": "51",
+													"disabled": true
+												},
+												{
+													"key": "quantidadeTotal",
+													"value": "-500"
+												},
+												{
+													"key": "idUsuario",
+													"value": "{{user_id_2}}",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "FIltrar por ID do usuário",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function() {",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"A resposta deve conter a propriedade 'quantidade' e 'carrinhos'\", function() {",
+													"    pm.expect(jsonResponse).to.have.property('quantidade')",
+													"    pm.expect(jsonResponse).to.have.property('carrinhos')",
+													"})",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/carrinhos?idUsuario={{user_id_2}}",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"carrinhos"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "{{cart_id_2}}",
+													"disabled": true
+												},
+												{
+													"key": "precoTotal",
+													"value": "51",
+													"disabled": true
+												},
+												{
+													"key": "quantidadeTotal",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "idUsuario",
+													"value": "{{user_id_2}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ID do usuário inexistente",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody);",
+													"",
+													"pm.test(\"Status code deve ser 200\", function() {",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"A resposta deve conter a propriedade 'quantidade' e 'carrinhos'\", function() {",
+													"    pm.expect(jsonResponse).to.have.property('quantidade')",
+													"    pm.expect(jsonResponse).to.have.property('carrinhos')",
+													"})",
+													"",
+													"pm.test(\"A quantidade de carrinhos deve ser 0\", function() {",
+													"    pm.expect(jsonResponse.quantidade).to.equal(0)",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/carrinhos?idUsuario=asdzxc",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"carrinhos"
+											],
+											"query": [
+												{
+													"key": "_id",
+													"value": "{{cart_id_2}}",
+													"disabled": true
+												},
+												{
+													"key": "precoTotal",
+													"value": "51",
+													"disabled": true
+												},
+												{
+													"key": "quantidadeTotal",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "idUsuario",
+													"value": "asdzxc"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "GET /carrinhos/{_id}",
+							"item": [
+								{
+									"name": "Buscar carrinho",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function() {",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"Resposta contém dados\", function() {",
+													"    pm.expect(jsonResponse).to.not.be.empty",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/carrinhos/{{cart_id_2}}",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"carrinhos",
+												"{{cart_id_2}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Carrinho inexistente",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody);",
+													"",
+													"// Valida o status code",
+													"pm.test(\"Status code deve ser 400\", function() {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"// Valida a mensagem de erro",
+													"pm.test(\"A mensagem de erro deve ser 'Carrinho não encontrado'\", function() {",
+													"    pm.expect(jsonResponse).to.have.property('message', 'Carrinho não encontrado');",
+													"});",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/carrinhos/0000000",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"carrinhos",
+												"0000000"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "PUT",
+					"item": [
+						{
+							"name": "Produto editado com sucesso",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function() {",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"A mensagem de sucesso deve ser 'Cadastro realizado com sucesso'\", function() {",
+											"    pm.expect(jsonResponse).to.have.property('message', 'Cadastro realizado com sucesso')",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_2}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"{{prod_nome_PUT}}\",\n  \"preco\": {{prod_preco_PUT}},\n  \"descricao\": \"{{prod_descricao_PUT}}\",\n  \"quantidade\": {{prod_quantidade_PUT}}\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/produtos/{{prod_id_2}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"produtos",
+										"{{prod_id_2}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pesquisa sem ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 405\", function() {",
+											"    pm.response.to.have.status(405)",
+											"})",
+											"",
+											"pm.test(\"A mensagem de sucesso deve ser 'Cadastro realizado com sucesso'\", function() {",
+											"    pm.expect(jsonResponse).to.have.property('message', 'Não é possível realizar PUT em /produtos/. Acesse https://serverest.dev para ver as rotas disponíveis e como utilizá-las.')",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_0}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"{{prod_nome_PUT}}\",\n  \"preco\": {{prod_preco_PUT}},\n  \"descricao\": \"{{prod_descricao_PUT}}\",\n  \"quantidade\": {{prod_quantidade_PUT}}\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/produtos/",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"produtos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nome existente",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 400\", function() {",
+											"    pm.response.to.have.status(400)",
+											"})",
+											"",
+											"pm.test(\"A mensagem deve ser 'Já existe produto com esse nome'\", function() {",
+											"    pm.expect(jsonResponse).to.have.property('message', 'Já existe produto com esse nome')",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_0}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nome\": \"{{prod_nome_3}}\",\n  \"preco\": {{prod_preco_PUT}},\n  \"descricao\": \"{{prod_descricao_PUT}}\",\n  \"quantidade\": {{prod_quantidade_PUT}}\n}"
+								},
+								"url": {
+									"raw": "https://serverest.dev/produtos/{{prod_id_2}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"produtos",
+										"{{prod_id_2}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "DELETE /carrinhos/cancelar-compra",
+							"item": [
+								{
+									"name": "Cancelar compra",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function() {",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"A mensagem deve ser 'Registro excluído com sucesso. Estoque dos produtos reabastecido'\", function() {",
+													"    pm.expect(jsonResponse).to.have.property('message', 'Registro excluído com sucesso. Estoque dos produtos reabastecido')",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{auth_token_3}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/carrinhos/cancelar-compra",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"carrinhos",
+												"cancelar-compra"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Cancelar compra sem autorização",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 401\", function() {",
+													"    pm.response.to.have.status(401)",
+													"})",
+													"",
+													"pm.test(\"A mensagem deve ser 'Token de acesso ausente, inválido, expirado ou usuário do token não existe mais'\", function() {",
+													"    pm.expect(jsonResponse).to.have.property('message', 'Token de acesso ausente, inválido, expirado ou usuário do token não existe mais')",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{auth_token_3}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/carrinhos/cancelar-compra",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"carrinhos",
+												"cancelar-compra"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "DELETE /carrinhos/concluir-compra",
+							"item": [
+								{
+									"name": "Criar carrinho",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"postman.setEnvironmentVariable(\"cart_id_3\",jsonResponse._id)",
+													"",
+													"pm.test(\"Status code deve ser 201\", function(){",
+													"    pm.response.to.have.status(201)",
+													"})",
+													"",
+													"pm.test(\"Valida mensagem de sucesso\", function(){",
+													"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+													"})",
+													"",
+													"pm.test(\"Valida se retorna o _id\", function() {",
+													"    pm.expect(jsonResponse).to.have.property(\"_id\")",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{auth_token_3}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"produtos\": [\n    {\n      \"idProduto\": \"{{prod_id_4}}\",\n      \"quantidade\": 1\n    }\n  ]\n}"
+										},
+										"url": {
+											"raw": "https://serverest.dev/carrinhos",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"carrinhos"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Retornar produto ao estoque",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 200\", function() {",
+													"    pm.response.to.have.status(200)",
+													"})",
+													"",
+													"pm.test(\"A mensagem deve ser 'Registro excluído com sucesso'\", function() {",
+													"    pm.expect(jsonResponse).to.have.property('message', 'Registro excluído com sucesso')",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{auth_token_3}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/carrinhos/concluir-compra",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"carrinhos",
+												"concluir-compra"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Retornar produto ao estoque sem autorização",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"var jsonResponse = JSON.parse(responseBody)",
+													"",
+													"pm.test(\"Status code deve ser 401\", function() {",
+													"    pm.response.to.have.status(401)",
+													"})",
+													"",
+													"pm.test(\"A mensagem deve ser 'Token de acesso ausente, inválido, expirado ou usuário do token não existe mais'\", function() {",
+													"    pm.expect(jsonResponse).to.have.property('message', 'Token de acesso ausente, inválido, expirado ou usuário do token não existe mais')",
+													"})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{auth_token_3}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "https://serverest.dev/carrinhos/concluir-compra",
+											"protocol": "https",
+											"host": [
+												"serverest",
+												"dev"
+											],
+											"path": [
+												"carrinhos",
+												"concluir-compra"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Deletando massa de teste",
+			"item": [
+				{
+					"name": "Usuário 0",
+					"item": [
+						{
+							"name": "Excluir produto 0",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function() {",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Validar mensagem de sucesso\", function() {",
+											"    pm.expect(jsonResponse.message).to.eql(\"Registro excluído com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_0}}"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/produtos/{{prod_id_0}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"produtos",
+										"{{prod_id_0}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Excluir produto 1",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function() {",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Validar mensagem de sucesso\", function() {",
+											"    pm.expect(jsonResponse.message).to.eql(\"Registro excluído com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_0}}"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/produtos/{{prod_id_1}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"produtos",
+										"{{prod_id_1}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Excluir usuário",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Registro excluído com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/usuarios/{{user_id_0}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios",
+										"{{user_id_0}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Usuário 1",
+					"item": [
+						{
+							"name": "Cancelar compra",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function() {",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"A mensagem deve ser 'Registro excluído com sucesso. Estoque dos produtos reabastecido'\", function() {",
+											"    pm.expect(jsonResponse).to.have.property('message', 'Registro excluído com sucesso. Estoque dos produtos reabastecido')",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_1}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/carrinhos/cancelar-compra",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos",
+										"cancelar-compra"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Excluir produto 2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function() {",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Validar mensagem de sucesso\", function() {",
+											"    pm.expect(jsonResponse.message).to.eql(\"Registro excluído com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_1}}"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/produtos/{{prod_id_2}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"produtos",
+										"{{prod_id_2}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Excluir usuário",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Registro excluído com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/usuarios/{{user_id_1}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios",
+										"{{user_id_1}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Usuário 2",
+					"item": [
+						{
+							"name": "Cancelar compra",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function() {",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"A mensagem deve ser 'Registro excluído com sucesso. Estoque dos produtos reabastecido'\", function() {",
+											"    pm.expect(jsonResponse).to.have.property('message', 'Registro excluído com sucesso. Estoque dos produtos reabastecido')",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_2}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/carrinhos/cancelar-compra",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"carrinhos",
+										"cancelar-compra"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Excluir produto 3",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function() {",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Validar mensagem de sucesso\", function() {",
+											"    pm.expect(jsonResponse.message).to.eql(\"Registro excluído com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_1}}"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/produtos/{{prod_id_3}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"produtos",
+										"{{prod_id_3}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Excluir usuário",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Registro excluído com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/usuarios/{{user_id_2}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios",
+										"{{user_id_2}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Usuário 3",
+					"item": [
+						{
+							"name": "Excluir produto 4",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function() {",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Validar mensagem de sucesso\", function() {",
+											"    pm.expect(jsonResponse.message).to.eql(\"Registro excluído com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{auth_token_3}}"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/produtos/{{prod_id_4}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"produtos",
+										"{{prod_id_4}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Excluir usuário",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse = JSON.parse(responseBody)",
+											"",
+											"pm.test(\"Status code deve ser 200\", function(){",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"Valida mensagem de sucesso\", function(){",
+											"    pm.expect(jsonResponse.message).to.equal(\"Registro excluído com sucesso\")",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "https://serverest.dev/usuarios/{{user_id_3}}",
+									"protocol": "https",
+									"host": [
+										"serverest",
+										"dev"
+									],
+									"path": [
+										"usuarios",
+										"{{user_id_3}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

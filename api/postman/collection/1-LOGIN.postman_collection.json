@@ -1,0 +1,453 @@
+{
+	"info": {
+		"_postman_id": "3c659025-1f31-4570-8106-af6a48d9b5f0",
+		"name": "1-LOGIN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29279522"
+	},
+	"item": [
+		{
+			"name": "Criando a massa de testes",
+			"item": [
+				{
+					"name": "Criar usuário 0",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonResponse = JSON.parse(responseBody)",
+									"postman.setEnvironmentVariable(\"user_id_0\",jsonResponse._id)",
+									"",
+									"pm.test(\"Status code deve ser 201\", function(){",
+									"    pm.response.to.have.status(201)",
+									"})",
+									"",
+									"pm.test(\"Valida mensagem de sucesso\", function(){",
+									"    pm.expect(jsonResponse.message).to.equal(\"Cadastro realizado com sucesso\")",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Nicolas Kumabe\",\n  \"email\": \"{{login_email}}\",\n  \"password\": \"{{login_password}}\",\n  \"administrador\": \"true\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://serverest.dev/usuarios",
+							"protocol": "https",
+							"host": [
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Testes",
+			"item": [
+				{
+					"name": "Login com sucesso",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonResponse = JSON.parse(responseBody)",
+									"",
+									"pm.test(\"Status code deve ser 200\", function(){",
+									"    pm.response.to.have.status(200)",
+									"})",
+									"",
+									"pm.test(\"Valida mensagem de sucesso\", function(){",
+									"    pm.expect(jsonResponse.message).to.equal(\"Login realizado com sucesso\")",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"{{login_email}}\",\n  \"password\": \"{{login_password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://serverest.dev/login",
+							"protocol": "https",
+							"host": [
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email inválido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonResponse = JSON.parse(responseBody)",
+									"",
+									"pm.test(\"Status code deve ser 401\", function(){",
+									"    pm.response.to.have.status(401)",
+									"})",
+									"",
+									"pm.test(\"Valida mensagem de erro\", function(){",
+									"    pm.expect(jsonResponse.message).to.equal(\"Email e/ou senha inválidos\")",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"401@4i.com\",\n  \"password\": \"{{login_password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://serverest.dev/login",
+							"protocol": "https",
+							"host": [
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Senha inválida",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonResponse = JSON.parse(responseBody)",
+									"",
+									"pm.test(\"Status code deve ser 401\", function(){",
+									"    pm.response.to.have.status(401)",
+									"})",
+									"",
+									"pm.test(\"Valida mensagem de erro\", function(){",
+									"    pm.expect(jsonResponse.message).to.equal(\"Email e/ou senha inválidos\")",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"{{login_email}}\",\n  \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://serverest.dev/login",
+							"protocol": "https",
+							"host": [
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email em branco",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonResponse = JSON.parse(responseBody)",
+									"",
+									"pm.test(\"Status code deve ser 400\", function(){",
+									"    pm.response.to.have.status(400)",
+									"})",
+									"",
+									"pm.test(\"Valida mensagem de erro\", function(){",
+									"    pm.expect(jsonResponse.email).to.equal(\"email não pode ficar em branco\")",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"\",\n  \"password\": \"{{login_password}}\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://serverest.dev/login",
+							"protocol": "https",
+							"host": [
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sem o campo email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonResponse = JSON.parse(responseBody)",
+									"",
+									"pm.test(\"Status code deve ser 400\", function(){",
+									"    pm.response.to.have.status(400)",
+									"})",
+									"",
+									"pm.test(\"Valida mensagem de erro\", function(){",
+									"    pm.expect(jsonResponse.email).to.equal(\"email é obrigatório\")",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"password\": \"{{login_password}}\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://serverest.dev/login",
+							"protocol": "https",
+							"host": [
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Senha em branco",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonResponse = JSON.parse(responseBody)",
+									"",
+									"pm.test(\"Status code deve ser 400\", function(){",
+									"    pm.response.to.have.status(400)",
+									"})",
+									"",
+									"pm.test(\"Valida mensagem de erro\", function(){",
+									"    pm.expect(jsonResponse.password).to.equal(\"password não pode ficar em branco\")",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"{{login_email}}\",\n  \"password\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://serverest.dev/login",
+							"protocol": "https",
+							"host": [
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sem o campo senha",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonResponse = JSON.parse(responseBody)",
+									"",
+									"pm.test(\"Status code deve ser 400\", function(){",
+									"    pm.response.to.have.status(400)",
+									"})",
+									"",
+									"pm.test(\"Valida mensagem de erro\", function(){",
+									"    pm.expect(jsonResponse.password).to.equal(\"password é obrigatório\")",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"{{login_email}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://serverest.dev/login",
+							"protocol": "https",
+							"host": [
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Deletando massa de teste",
+			"item": [
+				{
+					"name": "Excluir usuário 0",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonResponse = JSON.parse(responseBody)",
+									"postman.setEnvironmentVariable(\"user_id_0\",jsonResponse._id)",
+									"",
+									"pm.test(\"Status code deve ser 200\", function(){",
+									"    pm.response.to.have.status(200)",
+									"})",
+									"",
+									"pm.test(\"Valida mensagem de sucesso\", function(){",
+									"    pm.expect(jsonResponse.message).to.equal(\"Registro excluído com sucesso\")",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://serverest.dev/usuarios/{{user_id_0}}",
+							"protocol": "https",
+							"host": [
+								"serverest",
+								"dev"
+							],
+							"path": [
+								"usuarios",
+								"{{user_id_0}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
