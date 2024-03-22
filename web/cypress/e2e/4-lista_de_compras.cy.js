@@ -41,7 +41,29 @@ describe('lista de compras', () => {
     //   cy.get('.card').contains(`${produto1}`)
     // })
 
-    it('aumentando a quantidade do mesmo produto', () => {
+    // it('aumentando a quantidade do mesmo produto', () => {
+    //   // Dado que estou na lista de compras
+    //   cy.visit('https://front.serverest.dev/login')
+    //   cy.get('[data-testid="email"]').type(`${email1}`)
+    //   cy.get('[data-testid="senha"]').type(`${senha1}`)
+    //   cy.get('[data-testid="entrar"]').click({force: true})
+    //   cy.url().should('eq', 'https://front.serverest.dev/home')
+    //   cy.get('h1').contains('Serverest Store')
+    //   cy.get('[data-testid="pesquisar"]').type(`${produto1}`)
+    //   cy.get('[data-testid="botaoPesquisar"]').click()
+    //   cy.get(':nth-child(1) > .card-body').contains(`${produto1}`)
+    //   cy.get(':nth-child(1) > .card-body > div > [href="/minhaListaDeProdutos"] > [data-testid="adicionarNaLista"]')
+    //   .click()
+    //   cy.get('.card').contains(`${produto1}`)
+
+    //   // Quando clico no sinal de positivo do produto
+    //   cy.get('[data-testid="product-increase-quantity"]').click()
+
+    //   // Entao a quantidade deve aumentar para 2
+    //   cy.get(':nth-child(3) > p').should('have.text', '2')
+    // })
+
+    it('diminuindo a quantidade do mesmo produto', () => {
       // Dado que estou na lista de compras
       cy.visit('https://front.serverest.dev/login')
       cy.get('[data-testid="email"]').type(`${email1}`)
@@ -56,10 +78,17 @@ describe('lista de compras', () => {
       .click()
       cy.get('.card').contains(`${produto1}`)
 
-      // Quando clico no sinal de positivo do produto
-      cy.get('[data-testid="product-increase-quantity"]').click()
+      // Quando clico 5 vezes no sinal de positivo do produto
+      for (let i = 0; i < 4; i++) {
+        cy.get('[data-testid="product-increase-quantity"]').click();
+      }
 
-      // Entao a quantidade deve aumentar para 2
-      cy.get(':nth-child(3) > p').should('have.text', '2')
+      // E clico 2 vezes no sinal de negativo do produto
+      for (let i = 0; i < 2; i++) {
+        cy.get('[data-testid="product-decrease-quantity"]').click();
+      }
+
+      // Entao a quantidade deve ser 3
+      cy.get(':nth-child(3) > p').should('have.text', '3')
     })
   })
