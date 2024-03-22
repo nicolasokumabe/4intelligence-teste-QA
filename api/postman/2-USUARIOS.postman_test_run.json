@@ -1,0 +1,3430 @@
+{
+	"id": "284cde7b-7f90-4969-86a6-f1be432d73c5",
+	"name": "2-USUARIOS",
+	"timestamp": "2024-03-21T03:10:35.535Z",
+	"collection_id": "29279522-fa4c34a1-1e88-457a-b6b2-c8cff0fe762c",
+	"folder_id": 0,
+	"environment_id": "29279522-1d388418-0748-4154-9cc0-44cf1f434611",
+	"totalPass": 731,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "25987620-3c5f-4226-a468-20005f3b0571",
+			"name": "Criar usuário 0",
+			"url": "https://serverest.dev/usuarios",
+			"time": 179,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				179
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "edbd951c-397f-45f9-98d5-141c9989d11f",
+			"name": "Criar usuário 1",
+			"url": "https://serverest.dev/usuarios",
+			"time": 344,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				344
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "69c24bcd-f1f5-4a12-aa9f-57577140e24f",
+			"name": "Criar usuário 2",
+			"url": "https://serverest.dev/usuarios",
+			"time": 178,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				178
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "eb73eb32-7e61-43b7-9778-8a593726267b",
+			"name": "Cadastrar usuário",
+			"url": "https://serverest.dev/usuarios",
+			"time": 160,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				160
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "61bae844-b4a2-4729-9096-ee73e74d4af3",
+			"name": "Buscar usuário",
+			"url": "https://serverest.dev/usuarios/OUpu5kN4KvrVrq1X",
+			"time": 224,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Nome deve ser Anderson Silva": true,
+				"Email deve ser spider@ufc.com.br": true,
+				"Senha deve ser PesoLeve": true,
+				"Administrador deve ser false": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Nome deve ser Anderson Silva": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Email deve ser spider@ufc.com.br": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Senha deve ser PesoLeve": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Administrador deve ser false": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				224
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Nome deve ser Anderson Silva": true,
+					"Email deve ser spider@ufc.com.br": true,
+					"Senha deve ser PesoLeve": true,
+					"Administrador deve ser false": true
+				}
+			]
+		},
+		{
+			"id": "0c1d3c46-9a4d-42c9-87cb-1fe2e0334712",
+			"name": "Editar usuário",
+			"url": "https://serverest.dev/usuarios/OUpu5kN4KvrVrq1X",
+			"time": 389,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				389
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "e47bde3f-c6d6-4140-bed1-acac31efbc32",
+			"name": "Excluir usuário",
+			"url": "https://serverest.dev/usuarios/OUpu5kN4KvrVrq1X",
+			"time": 159,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				159
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "ec5d3071-99a3-4758-9634-3cd553e3a407",
+			"name": "Usuário cadastrado com sucesso",
+			"url": "https://serverest.dev/usuarios",
+			"time": 218,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				218
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "9f013a06-37c2-47fc-92f2-cee917fba906",
+			"name": "Excluir usuário",
+			"url": "https://serverest.dev/usuarios/dloLnmmoRnY5l14c",
+			"time": 390,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				390
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "83902030-3069-40f1-a24d-5644702f38be",
+			"name": "Nome em branco",
+			"url": "https://serverest.dev/usuarios",
+			"time": 187,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				187
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "1a0b5dae-1bc0-4564-9465-0df2d7f12621",
+			"name": "Sem o campo nome",
+			"url": "https://serverest.dev/usuarios",
+			"time": 189,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				189
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "16a33714-ba1e-42d3-90ee-e42b68e48dbf",
+			"name": "Formato de email errado",
+			"url": "https://serverest.dev/usuarios",
+			"time": 189,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				189
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "e2bc3b6e-8e18-4152-98a5-01135d4de271",
+			"name": "Email em branco",
+			"url": "https://serverest.dev/usuarios",
+			"time": 189,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				189
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "d39e01d6-08f3-4138-a667-9e0a9c5ef6ee",
+			"name": "Sem o campo email",
+			"url": "https://serverest.dev/usuarios",
+			"time": 283,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				283
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "444b02fa-46e8-4ca6-900c-d0865d179f95",
+			"name": "Senha em branco",
+			"url": "https://serverest.dev/usuarios",
+			"time": 158,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				158
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "b621b79a-6e23-41ae-b698-95cf42d50b83",
+			"name": "Sem o campo senha",
+			"url": "https://serverest.dev/usuarios",
+			"time": 160,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				160
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "a88cf8ce-310f-4a7f-a0c6-f3378fc7ea99",
+			"name": "Dado de administrador inválido",
+			"url": "https://serverest.dev/usuarios",
+			"time": 332,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				332
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "d80a6cc7-846d-480d-854b-f8bc877f8992",
+			"name": "Administrador em branco",
+			"url": "https://serverest.dev/usuarios",
+			"time": 390,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				390
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "db453ac9-5324-40f8-b20a-a3d7199038c5",
+			"name": "Sem o campo administrador",
+			"url": "https://serverest.dev/usuarios",
+			"time": 395,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				395
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "901fe8c5-5680-42c7-80ec-a7367ec6a376",
+			"name": "Listar usuários cadastrados",
+			"url": "https://serverest.dev/usuarios",
+			"time": 331,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Usuário: Fulano da Silva": true,
+				"Usuário: Nikko": true,
+				"Usuário: Rodrigo": true,
+				"Usuário: UserTeste001": true,
+				"Usuário: Valentin": true,
+				"Usuário: Dr. Thelma Koss": true,
+				"Usuário: Levi Crona": true,
+				"Usuário: CarolinaQATeste": true,
+				"Usuário: automation.8773": true,
+				"Usuário: Lorena Simonis": true,
+				"Usuário: Giulia Antena": true,
+				"Usuário: Albert": true,
+				"Usuário: Nettie Roob V": true,
+				"Usuário: Dorothy": true,
+				"Usuário: Camila": true,
+				"Usuário: Endrick": true,
+				"Usuário: Maria Clara da Rosa": true,
+				"Usuário: Emma": true,
+				"Usuário: Matthew": true,
+				"Usuário: Francisco Braga": true,
+				"Usuário: Abel Mann": true,
+				"Usuário: Victor Davis": true,
+				"Usuário: Joanna": true,
+				"Usuário: Jacinto Pinto Aquino Rego": true,
+				"Usuário: Ariane": true,
+				"Usuário: automation.9177": true,
+				"Usuário: Brian": true,
+				"Usuário: Carrie Weber": true,
+				"Usuário: Antonia O'Connell": true,
+				"Usuário: Emilio Rempel": true,
+				"Usuário: automation.7509": true,
+				"Usuário: Melinda McCullough": true,
+				"Usuário: kevin": true,
+				"Usuário: Ronaldo Barbosa da Silva": true,
+				"Usuário: Daryl Grady DDS": true,
+				"Usuário: automation.2306": true,
+				"Usuário: Hannah Harber": true,
+				"Usuário: Lester Ortiz": true,
+				"Usuário: Piper": true,
+				"Usuário: Zena": true,
+				"Usuário: Vinicius Júnior": true,
+				"Usuário: automation.2843": true,
+				"Usuário: automation.3057": true,
+				"Usuário: Lori": true,
+				"Usuário: Alison Stanton": true,
+				"Usuário: Ignacio Schaden": true,
+				"Usuário: automation.1639": true,
+				"Usuário: Lucas de Felice": true,
+				"Usuário: Felicia Spinka": true,
+				"Usuário: Cesar Pouros-Skiles V": true,
+				"Usuário: Taylor Moen": true,
+				"Usuário: Mrs. Kristi Tromp": true,
+				"Usuário: automation.9614": true,
+				"Usuário: junior cardoso": true,
+				"Usuário: Jasmine": true,
+				"Usuário: Luiz": true,
+				"Usuário: Tommy": true,
+				"Usuário: Lcs QA Admin": true,
+				"Usuário: Yuri": true,
+				"Usuário: Hortense": true,
+				"Usuário: Christopher Weissnat": true,
+				"Usuário: Tom Quigley": true,
+				"Usuário: Miss Tricia Prohaska": true,
+				"Usuário: Peyton": true,
+				"Usuário: teste robot api": true,
+				"Usuário: Roselyn": true,
+				"Usuário: Mrs. Annette Gorczany": true,
+				"Usuário: Nicolas O Kumabe": true,
+				"Usuário: Dianne Satterfield": true,
+				"Usuário: Dora Senger": true,
+				"Usuário: Trevor": true,
+				"Usuário: automation.49095840": true,
+				"Usuário: Margarita Rutherford": true,
+				"Usuário: Thomas Domingues": true,
+				"Usuário: automation.7829": true,
+				"Usuário: Robson Cerqueira": true,
+				"Usuário: Novella": true,
+				"Usuário: Saul Stracke": true,
+				"Usuário: Anthony Huel": true,
+				"Usuário: Bumbum Guloso da Silva": true,
+				"Usuário: Claudia Gutkowski": true,
+				"Usuário: Eloisa": true,
+				"Usuário: Michelle Bradtke": true,
+				"Usuário: Humberto": true,
+				"Usuário: Derrick": true,
+				"Usuário: Eloise": true,
+				"Usuário: Tyree": true,
+				"Usuário: Lester Reynolds": true,
+				"Usuário: Zola": true,
+				"Usuário: Nico": true,
+				"Usuário: Edythe": true,
+				"Usuário: Mattie Powlowski": true,
+				"Usuário: Murilo Rodrigues": true,
+				"Usuário: Vesta": true,
+				"Usuário: Mr. Ricardo Kilback": true,
+				"Usuário: Everett Rippin Jr.": true,
+				"Usuário: Sophia Mayer": true,
+				"Usuário: Allen Botsford": true,
+				"Usuário: Luis": true,
+				"Usuário: Nicolas": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Fulano da Silva": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Nikko": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Rodrigo": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: UserTeste001": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Valentin": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Dr. Thelma Koss": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Levi Crona": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: CarolinaQATeste": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.8773": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Lorena Simonis": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Giulia Antena": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Albert": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Nettie Roob V": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Dorothy": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Camila": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Endrick": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Maria Clara da Rosa": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Emma": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Matthew": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Francisco Braga": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Abel Mann": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Victor Davis": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Joanna": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Jacinto Pinto Aquino Rego": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Ariane": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.9177": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Brian": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Carrie Weber": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Antonia O'Connell": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Emilio Rempel": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.7509": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Melinda McCullough": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: kevin": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Ronaldo Barbosa da Silva": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Daryl Grady DDS": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.2306": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Hannah Harber": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Lester Ortiz": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Piper": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Zena": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Vinicius Júnior": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.2843": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.3057": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Lori": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Alison Stanton": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Ignacio Schaden": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.1639": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Lucas de Felice": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Felicia Spinka": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Cesar Pouros-Skiles V": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Taylor Moen": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Mrs. Kristi Tromp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.9614": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: junior cardoso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Jasmine": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Luiz": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Tommy": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Lcs QA Admin": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Yuri": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Hortense": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Christopher Weissnat": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Tom Quigley": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Miss Tricia Prohaska": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Peyton": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: teste robot api": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Roselyn": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Mrs. Annette Gorczany": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Nicolas O Kumabe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Dianne Satterfield": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Dora Senger": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Trevor": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.49095840": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Margarita Rutherford": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Thomas Domingues": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.7829": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Robson Cerqueira": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Novella": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Saul Stracke": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Anthony Huel": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Bumbum Guloso da Silva": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Claudia Gutkowski": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Eloisa": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Michelle Bradtke": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Humberto": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Derrick": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Eloise": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Tyree": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Lester Reynolds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Zola": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Nico": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Edythe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Mattie Powlowski": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Murilo Rodrigues": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Vesta": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Mr. Ricardo Kilback": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Everett Rippin Jr.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Sophia Mayer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Allen Botsford": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Luis": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Nicolas": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				331
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Usuário: Fulano da Silva": true,
+					"Usuário: Nikko": true,
+					"Usuário: Rodrigo": true,
+					"Usuário: UserTeste001": true,
+					"Usuário: Valentin": true,
+					"Usuário: Dr. Thelma Koss": true,
+					"Usuário: Levi Crona": true,
+					"Usuário: CarolinaQATeste": true,
+					"Usuário: automation.8773": true,
+					"Usuário: Lorena Simonis": true,
+					"Usuário: Giulia Antena": true,
+					"Usuário: Albert": true,
+					"Usuário: Nettie Roob V": true,
+					"Usuário: Dorothy": true,
+					"Usuário: Camila": true,
+					"Usuário: Endrick": true,
+					"Usuário: Maria Clara da Rosa": true,
+					"Usuário: Emma": true,
+					"Usuário: Matthew": true,
+					"Usuário: Francisco Braga": true,
+					"Usuário: Abel Mann": true,
+					"Usuário: Victor Davis": true,
+					"Usuário: Joanna": true,
+					"Usuário: Jacinto Pinto Aquino Rego": true,
+					"Usuário: Ariane": true,
+					"Usuário: automation.9177": true,
+					"Usuário: Brian": true,
+					"Usuário: Carrie Weber": true,
+					"Usuário: Antonia O'Connell": true,
+					"Usuário: Emilio Rempel": true,
+					"Usuário: automation.7509": true,
+					"Usuário: Melinda McCullough": true,
+					"Usuário: kevin": true,
+					"Usuário: Ronaldo Barbosa da Silva": true,
+					"Usuário: Daryl Grady DDS": true,
+					"Usuário: automation.2306": true,
+					"Usuário: Hannah Harber": true,
+					"Usuário: Lester Ortiz": true,
+					"Usuário: Piper": true,
+					"Usuário: Zena": true,
+					"Usuário: Vinicius Júnior": true,
+					"Usuário: automation.2843": true,
+					"Usuário: automation.3057": true,
+					"Usuário: Lori": true,
+					"Usuário: Alison Stanton": true,
+					"Usuário: Ignacio Schaden": true,
+					"Usuário: automation.1639": true,
+					"Usuário: Lucas de Felice": true,
+					"Usuário: Felicia Spinka": true,
+					"Usuário: Cesar Pouros-Skiles V": true,
+					"Usuário: Taylor Moen": true,
+					"Usuário: Mrs. Kristi Tromp": true,
+					"Usuário: automation.9614": true,
+					"Usuário: junior cardoso": true,
+					"Usuário: Jasmine": true,
+					"Usuário: Luiz": true,
+					"Usuário: Tommy": true,
+					"Usuário: Lcs QA Admin": true,
+					"Usuário: Yuri": true,
+					"Usuário: Hortense": true,
+					"Usuário: Christopher Weissnat": true,
+					"Usuário: Tom Quigley": true,
+					"Usuário: Miss Tricia Prohaska": true,
+					"Usuário: Peyton": true,
+					"Usuário: teste robot api": true,
+					"Usuário: Roselyn": true,
+					"Usuário: Mrs. Annette Gorczany": true,
+					"Usuário: Nicolas O Kumabe": true,
+					"Usuário: Dianne Satterfield": true,
+					"Usuário: Dora Senger": true,
+					"Usuário: Trevor": true,
+					"Usuário: automation.49095840": true,
+					"Usuário: Margarita Rutherford": true,
+					"Usuário: Thomas Domingues": true,
+					"Usuário: automation.7829": true,
+					"Usuário: Robson Cerqueira": true,
+					"Usuário: Novella": true,
+					"Usuário: Saul Stracke": true,
+					"Usuário: Anthony Huel": true,
+					"Usuário: Bumbum Guloso da Silva": true,
+					"Usuário: Claudia Gutkowski": true,
+					"Usuário: Eloisa": true,
+					"Usuário: Michelle Bradtke": true,
+					"Usuário: Humberto": true,
+					"Usuário: Derrick": true,
+					"Usuário: Eloise": true,
+					"Usuário: Tyree": true,
+					"Usuário: Lester Reynolds": true,
+					"Usuário: Zola": true,
+					"Usuário: Nico": true,
+					"Usuário: Edythe": true,
+					"Usuário: Mattie Powlowski": true,
+					"Usuário: Murilo Rodrigues": true,
+					"Usuário: Vesta": true,
+					"Usuário: Mr. Ricardo Kilback": true,
+					"Usuário: Everett Rippin Jr.": true,
+					"Usuário: Sophia Mayer": true,
+					"Usuário: Allen Botsford": true,
+					"Usuário: Luis": true,
+					"Usuário: Nicolas": true
+				}
+			]
+		},
+		{
+			"id": "ee3cf744-1bf1-45db-b104-b31e0de94a06",
+			"name": "Filtrar por ID",
+			"url": "https://serverest.dev/usuarios?_id=qD9WLGjtLd9cWKTA",
+			"time": 378,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Quantidade de usuários deve ser igual a 1": true,
+				"Validar usuário único": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Quantidade de usuários deve ser igual a 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validar usuário único": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				378
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Quantidade de usuários deve ser igual a 1": true,
+					"Validar usuário único": true
+				}
+			]
+		},
+		{
+			"id": "de80e3f5-39e3-4899-96b2-290d0c284767",
+			"name": "ID inexistente",
+			"url": "https://serverest.dev/usuarios?_id=123456",
+			"time": 389,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Quantidade de usuários deve ser igual a 0": true,
+				"Lista de usuários deve estar vazia": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Quantidade de usuários deve ser igual a 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de usuários deve estar vazia": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				389
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Quantidade de usuários deve ser igual a 0": true,
+					"Lista de usuários deve estar vazia": true
+				}
+			]
+		},
+		{
+			"id": "45b0a3ec-e992-4ea2-b219-2d299bb37519",
+			"name": "Filtrar por nome",
+			"url": "https://serverest.dev/usuarios?nome=a",
+			"time": 207,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Quantidade de usuários maior que 0": true,
+				"Todos os usuários possuem nomes com a letra 'a'": true,
+				"Usuário: Fulano da Silva": true,
+				"Usuário: Valentin": true,
+				"Usuário: Dr. Thelma Koss": true,
+				"Usuário: Levi Crona": true,
+				"Usuário: CarolinaQATeste": true,
+				"Usuário: automation.8773": true,
+				"Usuário: Lorena Simonis": true,
+				"Usuário: Giulia Antena": true,
+				"Usuário: Albert": true,
+				"Usuário: Camila": true,
+				"Usuário: Maria Clara da Rosa": true,
+				"Usuário: Emma": true,
+				"Usuário: Matthew": true,
+				"Usuário: Francisco Braga": true,
+				"Usuário: Abel Mann": true,
+				"Usuário: Victor Davis": true,
+				"Usuário: Joanna": true,
+				"Usuário: Jacinto Pinto Aquino Rego": true,
+				"Usuário: Ariane": true,
+				"Usuário: automation.9177": true,
+				"Usuário: Brian": true,
+				"Usuário: Carrie Weber": true,
+				"Usuário: Antonia O'Connell": true,
+				"Usuário: automation.7509": true,
+				"Usuário: Melinda McCullough": true,
+				"Usuário: Ronaldo Barbosa da Silva": true,
+				"Usuário: Daryl Grady DDS": true,
+				"Usuário: automation.2306": true,
+				"Usuário: Hannah Harber": true,
+				"Usuário: Zena": true,
+				"Usuário: automation.2843": true,
+				"Usuário: automation.3057": true,
+				"Usuário: Alison Stanton": true,
+				"Usuário: Ignacio Schaden": true,
+				"Usuário: automation.1639": true,
+				"Usuário: Lucas de Felice": true,
+				"Usuário: Felicia Spinka": true,
+				"Usuário: Cesar Pouros-Skiles V": true,
+				"Usuário: Taylor Moen": true,
+				"Usuário: automation.9614": true,
+				"Usuário: junior cardoso": true,
+				"Usuário: Jasmine": true,
+				"Usuário: Lcs QA Admin": true,
+				"Usuário: Christopher Weissnat": true,
+				"Usuário: Miss Tricia Prohaska": true,
+				"Usuário: teste robot api": true,
+				"Usuário: Mrs. Annette Gorczany": true,
+				"Usuário: Nicolas O Kumabe": true,
+				"Usuário: Dianne Satterfield": true,
+				"Usuário: Dora Senger": true,
+				"Usuário: automation.49095840": true,
+				"Usuário: Margarita Rutherford": true,
+				"Usuário: Thomas Domingues": true,
+				"Usuário: automation.7829": true,
+				"Usuário: Robson Cerqueira": true,
+				"Usuário: Novella": true,
+				"Usuário: Saul Stracke": true,
+				"Usuário: Anthony Huel": true,
+				"Usuário: Bumbum Guloso da Silva": true,
+				"Usuário: Claudia Gutkowski": true,
+				"Usuário: Eloisa": true,
+				"Usuário: Michelle Bradtke": true,
+				"Usuário: Zola": true,
+				"Usuário: Mattie Powlowski": true,
+				"Usuário: Vesta": true,
+				"Usuário: Mr. Ricardo Kilback": true,
+				"Usuário: Sophia Mayer": true,
+				"Usuário: Allen Botsford": true,
+				"Usuário: Nicolas": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Quantidade de usuários maior que 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Todos os usuários possuem nomes com a letra 'a'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Fulano da Silva": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Valentin": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Dr. Thelma Koss": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Levi Crona": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: CarolinaQATeste": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.8773": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Lorena Simonis": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Giulia Antena": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Albert": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Camila": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Maria Clara da Rosa": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Emma": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Matthew": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Francisco Braga": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Abel Mann": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Victor Davis": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Joanna": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Jacinto Pinto Aquino Rego": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Ariane": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.9177": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Brian": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Carrie Weber": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Antonia O'Connell": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.7509": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Melinda McCullough": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Ronaldo Barbosa da Silva": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Daryl Grady DDS": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.2306": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Hannah Harber": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Zena": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.2843": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.3057": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Alison Stanton": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Ignacio Schaden": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.1639": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Lucas de Felice": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Felicia Spinka": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Cesar Pouros-Skiles V": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Taylor Moen": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.9614": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: junior cardoso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Jasmine": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Lcs QA Admin": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Christopher Weissnat": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Miss Tricia Prohaska": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: teste robot api": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Mrs. Annette Gorczany": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Nicolas O Kumabe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Dianne Satterfield": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Dora Senger": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.49095840": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Margarita Rutherford": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Thomas Domingues": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.7829": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Robson Cerqueira": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Novella": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Saul Stracke": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Anthony Huel": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Bumbum Guloso da Silva": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Claudia Gutkowski": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Eloisa": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Michelle Bradtke": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Zola": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Mattie Powlowski": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Vesta": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Mr. Ricardo Kilback": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Sophia Mayer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Allen Botsford": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Nicolas": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				207
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Quantidade de usuários maior que 0": true,
+					"Todos os usuários possuem nomes com a letra 'a'": true,
+					"Usuário: Fulano da Silva": true,
+					"Usuário: Valentin": true,
+					"Usuário: Dr. Thelma Koss": true,
+					"Usuário: Levi Crona": true,
+					"Usuário: CarolinaQATeste": true,
+					"Usuário: automation.8773": true,
+					"Usuário: Lorena Simonis": true,
+					"Usuário: Giulia Antena": true,
+					"Usuário: Albert": true,
+					"Usuário: Camila": true,
+					"Usuário: Maria Clara da Rosa": true,
+					"Usuário: Emma": true,
+					"Usuário: Matthew": true,
+					"Usuário: Francisco Braga": true,
+					"Usuário: Abel Mann": true,
+					"Usuário: Victor Davis": true,
+					"Usuário: Joanna": true,
+					"Usuário: Jacinto Pinto Aquino Rego": true,
+					"Usuário: Ariane": true,
+					"Usuário: automation.9177": true,
+					"Usuário: Brian": true,
+					"Usuário: Carrie Weber": true,
+					"Usuário: Antonia O'Connell": true,
+					"Usuário: automation.7509": true,
+					"Usuário: Melinda McCullough": true,
+					"Usuário: Ronaldo Barbosa da Silva": true,
+					"Usuário: Daryl Grady DDS": true,
+					"Usuário: automation.2306": true,
+					"Usuário: Hannah Harber": true,
+					"Usuário: Zena": true,
+					"Usuário: automation.2843": true,
+					"Usuário: automation.3057": true,
+					"Usuário: Alison Stanton": true,
+					"Usuário: Ignacio Schaden": true,
+					"Usuário: automation.1639": true,
+					"Usuário: Lucas de Felice": true,
+					"Usuário: Felicia Spinka": true,
+					"Usuário: Cesar Pouros-Skiles V": true,
+					"Usuário: Taylor Moen": true,
+					"Usuário: automation.9614": true,
+					"Usuário: junior cardoso": true,
+					"Usuário: Jasmine": true,
+					"Usuário: Lcs QA Admin": true,
+					"Usuário: Christopher Weissnat": true,
+					"Usuário: Miss Tricia Prohaska": true,
+					"Usuário: teste robot api": true,
+					"Usuário: Mrs. Annette Gorczany": true,
+					"Usuário: Nicolas O Kumabe": true,
+					"Usuário: Dianne Satterfield": true,
+					"Usuário: Dora Senger": true,
+					"Usuário: automation.49095840": true,
+					"Usuário: Margarita Rutherford": true,
+					"Usuário: Thomas Domingues": true,
+					"Usuário: automation.7829": true,
+					"Usuário: Robson Cerqueira": true,
+					"Usuário: Novella": true,
+					"Usuário: Saul Stracke": true,
+					"Usuário: Anthony Huel": true,
+					"Usuário: Bumbum Guloso da Silva": true,
+					"Usuário: Claudia Gutkowski": true,
+					"Usuário: Eloisa": true,
+					"Usuário: Michelle Bradtke": true,
+					"Usuário: Zola": true,
+					"Usuário: Mattie Powlowski": true,
+					"Usuário: Vesta": true,
+					"Usuário: Mr. Ricardo Kilback": true,
+					"Usuário: Sophia Mayer": true,
+					"Usuário: Allen Botsford": true,
+					"Usuário: Nicolas": true
+				}
+			]
+		},
+		{
+			"id": "f0e71e0e-5e17-447e-8101-1e0c3a71ea5c",
+			"name": "Nome inexistente",
+			"url": "https://serverest.dev/usuarios?nome=zero",
+			"time": 241,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Quantidade de usuários deve ser igual a 0": true,
+				"Lista de usuários deve estar vazia": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Quantidade de usuários deve ser igual a 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de usuários deve estar vazia": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				241
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Quantidade de usuários deve ser igual a 0": true,
+					"Lista de usuários deve estar vazia": true
+				}
+			]
+		},
+		{
+			"id": "ad4973eb-bf09-4d9d-a235-f59fd800852e",
+			"name": "Filtrar por email",
+			"url": "https://serverest.dev/usuarios?email=nicolas.km@4i.com.br",
+			"time": 185,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Quantidade de usuários deve ser igual a 1": true,
+				"Validar usuário único": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Quantidade de usuários deve ser igual a 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validar usuário único": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				185
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Quantidade de usuários deve ser igual a 1": true,
+					"Validar usuário único": true
+				}
+			]
+		},
+		{
+			"id": "fe848a64-4479-4a41-bea5-f0b477daf5be",
+			"name": "Email inexistente",
+			"url": "https://serverest.dev/usuarios?email=email@inexistente.com",
+			"time": 187,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Quantidade de usuários deve ser igual a 0": true,
+				"Lista de usuários deve estar vazia": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Quantidade de usuários deve ser igual a 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de usuários deve estar vazia": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				187
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Quantidade de usuários deve ser igual a 0": true,
+					"Lista de usuários deve estar vazia": true
+				}
+			]
+		},
+		{
+			"id": "344f3ba4-125e-4f05-8500-eff9404a32d8",
+			"name": "Filtrar por password",
+			"url": "https://serverest.dev/usuarios?password=e",
+			"time": 213,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Quantidade de usuários maior que 0": true,
+				"Todos os usuários possuem senha com a letra 'e'": true,
+				"Usuário: Fulano da Silva": true,
+				"Usuário: UserTeste001": true,
+				"Usuário: Valentin": true,
+				"Usuário: Dr. Thelma Koss": true,
+				"Usuário: Levi Crona": true,
+				"Usuário: Lorena Simonis": true,
+				"Usuário: Albert": true,
+				"Usuário: Nettie Roob V": true,
+				"Usuário: Dorothy": true,
+				"Usuário: Endrick": true,
+				"Usuário: Emma": true,
+				"Usuário: Matthew": true,
+				"Usuário: Francisco Braga": true,
+				"Usuário: Abel Mann": true,
+				"Usuário: Victor Davis": true,
+				"Usuário: Joanna": true,
+				"Usuário: Jacinto Pinto Aquino Rego": true,
+				"Usuário: Brian": true,
+				"Usuário: Carrie Weber": true,
+				"Usuário: Emilio Rempel": true,
+				"Usuário: Melinda McCullough": true,
+				"Usuário: kevin": true,
+				"Usuário: Ronaldo Barbosa da Silva": true,
+				"Usuário: Daryl Grady DDS": true,
+				"Usuário: Hannah Harber": true,
+				"Usuário: Lester Ortiz": true,
+				"Usuário: Piper": true,
+				"Usuário: Zena": true,
+				"Usuário: Lori": true,
+				"Usuário: Alison Stanton": true,
+				"Usuário: Ignacio Schaden": true,
+				"Usuário: Felicia Spinka": true,
+				"Usuário: Cesar Pouros-Skiles V": true,
+				"Usuário: Taylor Moen": true,
+				"Usuário: Mrs. Kristi Tromp": true,
+				"Usuário: junior cardoso": true,
+				"Usuário: Jasmine": true,
+				"Usuário: Luiz": true,
+				"Usuário: Tommy": true,
+				"Usuário: Yuri": true,
+				"Usuário: Hortense": true,
+				"Usuário: Christopher Weissnat": true,
+				"Usuário: Tom Quigley": true,
+				"Usuário: Miss Tricia Prohaska": true,
+				"Usuário: Peyton": true,
+				"Usuário: Roselyn": true,
+				"Usuário: Mrs. Annette Gorczany": true,
+				"Usuário: Nicolas O Kumabe": true,
+				"Usuário: Dianne Satterfield": true,
+				"Usuário: Dora Senger": true,
+				"Usuário: Trevor": true,
+				"Usuário: Margarita Rutherford": true,
+				"Usuário: Novella": true,
+				"Usuário: Saul Stracke": true,
+				"Usuário: Anthony Huel": true,
+				"Usuário: Bumbum Guloso da Silva": true,
+				"Usuário: Claudia Gutkowski": true,
+				"Usuário: Michelle Bradtke": true,
+				"Usuário: Humberto": true,
+				"Usuário: Derrick": true,
+				"Usuário: Eloise": true,
+				"Usuário: Tyree": true,
+				"Usuário: Lester Reynolds": true,
+				"Usuário: Nico": true,
+				"Usuário: Edythe": true,
+				"Usuário: Mattie Powlowski": true,
+				"Usuário: Murilo Rodrigues": true,
+				"Usuário: Mr. Ricardo Kilback": true,
+				"Usuário: Everett Rippin Jr.": true,
+				"Usuário: Sophia Mayer": true,
+				"Usuário: Lucas de Felice": true,
+				"Usuário: Allen Botsford": true,
+				"Usuário: Luis": true,
+				"Usuário: Nicolas": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Quantidade de usuários maior que 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Todos os usuários possuem senha com a letra 'e'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Fulano da Silva": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: UserTeste001": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Valentin": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Dr. Thelma Koss": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Levi Crona": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Lorena Simonis": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Albert": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Nettie Roob V": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Dorothy": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Endrick": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Emma": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Matthew": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Francisco Braga": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Abel Mann": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Victor Davis": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Joanna": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Jacinto Pinto Aquino Rego": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Brian": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Carrie Weber": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Emilio Rempel": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Melinda McCullough": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: kevin": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Ronaldo Barbosa da Silva": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Daryl Grady DDS": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Hannah Harber": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Lester Ortiz": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Piper": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Zena": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Lori": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Alison Stanton": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Ignacio Schaden": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Felicia Spinka": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Cesar Pouros-Skiles V": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Taylor Moen": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Mrs. Kristi Tromp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: junior cardoso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Jasmine": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Luiz": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Tommy": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Yuri": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Hortense": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Christopher Weissnat": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Tom Quigley": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Miss Tricia Prohaska": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Peyton": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Roselyn": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Mrs. Annette Gorczany": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Nicolas O Kumabe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Dianne Satterfield": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Dora Senger": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Trevor": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Margarita Rutherford": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Novella": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Saul Stracke": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Anthony Huel": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Bumbum Guloso da Silva": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Claudia Gutkowski": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Michelle Bradtke": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Humberto": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Derrick": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Eloise": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Tyree": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Lester Reynolds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Nico": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Edythe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Mattie Powlowski": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Murilo Rodrigues": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Mr. Ricardo Kilback": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Everett Rippin Jr.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Sophia Mayer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Lucas de Felice": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Allen Botsford": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Luis": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Nicolas": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				213
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Quantidade de usuários maior que 0": true,
+					"Todos os usuários possuem senha com a letra 'e'": true,
+					"Usuário: Fulano da Silva": true,
+					"Usuário: UserTeste001": true,
+					"Usuário: Valentin": true,
+					"Usuário: Dr. Thelma Koss": true,
+					"Usuário: Levi Crona": true,
+					"Usuário: Lorena Simonis": true,
+					"Usuário: Albert": true,
+					"Usuário: Nettie Roob V": true,
+					"Usuário: Dorothy": true,
+					"Usuário: Endrick": true,
+					"Usuário: Emma": true,
+					"Usuário: Matthew": true,
+					"Usuário: Francisco Braga": true,
+					"Usuário: Abel Mann": true,
+					"Usuário: Victor Davis": true,
+					"Usuário: Joanna": true,
+					"Usuário: Jacinto Pinto Aquino Rego": true,
+					"Usuário: Brian": true,
+					"Usuário: Carrie Weber": true,
+					"Usuário: Emilio Rempel": true,
+					"Usuário: Melinda McCullough": true,
+					"Usuário: kevin": true,
+					"Usuário: Ronaldo Barbosa da Silva": true,
+					"Usuário: Daryl Grady DDS": true,
+					"Usuário: Hannah Harber": true,
+					"Usuário: Lester Ortiz": true,
+					"Usuário: Piper": true,
+					"Usuário: Zena": true,
+					"Usuário: Lori": true,
+					"Usuário: Alison Stanton": true,
+					"Usuário: Ignacio Schaden": true,
+					"Usuário: Felicia Spinka": true,
+					"Usuário: Cesar Pouros-Skiles V": true,
+					"Usuário: Taylor Moen": true,
+					"Usuário: Mrs. Kristi Tromp": true,
+					"Usuário: junior cardoso": true,
+					"Usuário: Jasmine": true,
+					"Usuário: Luiz": true,
+					"Usuário: Tommy": true,
+					"Usuário: Yuri": true,
+					"Usuário: Hortense": true,
+					"Usuário: Christopher Weissnat": true,
+					"Usuário: Tom Quigley": true,
+					"Usuário: Miss Tricia Prohaska": true,
+					"Usuário: Peyton": true,
+					"Usuário: Roselyn": true,
+					"Usuário: Mrs. Annette Gorczany": true,
+					"Usuário: Nicolas O Kumabe": true,
+					"Usuário: Dianne Satterfield": true,
+					"Usuário: Dora Senger": true,
+					"Usuário: Trevor": true,
+					"Usuário: Margarita Rutherford": true,
+					"Usuário: Novella": true,
+					"Usuário: Saul Stracke": true,
+					"Usuário: Anthony Huel": true,
+					"Usuário: Bumbum Guloso da Silva": true,
+					"Usuário: Claudia Gutkowski": true,
+					"Usuário: Michelle Bradtke": true,
+					"Usuário: Humberto": true,
+					"Usuário: Derrick": true,
+					"Usuário: Eloise": true,
+					"Usuário: Tyree": true,
+					"Usuário: Lester Reynolds": true,
+					"Usuário: Nico": true,
+					"Usuário: Edythe": true,
+					"Usuário: Mattie Powlowski": true,
+					"Usuário: Murilo Rodrigues": true,
+					"Usuário: Mr. Ricardo Kilback": true,
+					"Usuário: Everett Rippin Jr.": true,
+					"Usuário: Sophia Mayer": true,
+					"Usuário: Lucas de Felice": true,
+					"Usuário: Allen Botsford": true,
+					"Usuário: Luis": true,
+					"Usuário: Nicolas": true
+				}
+			]
+		},
+		{
+			"id": "4acc9918-f63d-46e8-91f3-5a76f405c507",
+			"name": "Password inexistente",
+			"url": "https://serverest.dev/usuarios?password=abcdef",
+			"time": 159,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Quantidade de usuários deve ser igual a 0": true,
+				"Lista de usuários deve estar vazia": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Quantidade de usuários deve ser igual a 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Lista de usuários deve estar vazia": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				159
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Quantidade de usuários deve ser igual a 0": true,
+					"Lista de usuários deve estar vazia": true
+				}
+			]
+		},
+		{
+			"id": "63a6d6cd-185c-4e63-bf2c-9b597a2e6c22",
+			"name": "Filtrar por administrador",
+			"url": "https://serverest.dev/usuarios?administrador=true",
+			"time": 296,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Quantidade de usuários maior que 0": true,
+				"Todos os usuários possuem administrador como 'true'": true,
+				"Usuário: Fulano da Silva": true,
+				"Usuário: Rodrigo": true,
+				"Usuário: Valentin": true,
+				"Usuário: Levi Crona": true,
+				"Usuário: CarolinaQATeste": true,
+				"Usuário: automation.8773": true,
+				"Usuário: Lorena Simonis": true,
+				"Usuário: Endrick": true,
+				"Usuário: Emma": true,
+				"Usuário: Matthew": true,
+				"Usuário: Abel Mann": true,
+				"Usuário: Victor Davis": true,
+				"Usuário: Joanna": true,
+				"Usuário: Jacinto Pinto Aquino Rego": true,
+				"Usuário: automation.9177": true,
+				"Usuário: Carrie Weber": true,
+				"Usuário: Antonia O'Connell": true,
+				"Usuário: automation.7509": true,
+				"Usuário: Melinda McCullough": true,
+				"Usuário: kevin": true,
+				"Usuário: Ronaldo Barbosa da Silva": true,
+				"Usuário: automation.2306": true,
+				"Usuário: Hannah Harber": true,
+				"Usuário: Lester Ortiz": true,
+				"Usuário: Piper": true,
+				"Usuário: Zena": true,
+				"Usuário: Vinicius Júnior": true,
+				"Usuário: automation.2843": true,
+				"Usuário: automation.3057": true,
+				"Usuário: Alison Stanton": true,
+				"Usuário: Ignacio Schaden": true,
+				"Usuário: automation.1639": true,
+				"Usuário: Felicia Spinka": true,
+				"Usuário: Cesar Pouros-Skiles V": true,
+				"Usuário: Taylor Moen": true,
+				"Usuário: Mrs. Kristi Tromp": true,
+				"Usuário: automation.9614": true,
+				"Usuário: junior cardoso": true,
+				"Usuário: Luiz": true,
+				"Usuário: Tommy": true,
+				"Usuário: Lcs QA Admin": true,
+				"Usuário: Christopher Weissnat": true,
+				"Usuário: Miss Tricia Prohaska": true,
+				"Usuário: Peyton": true,
+				"Usuário: teste robot api": true,
+				"Usuário: Roselyn": true,
+				"Usuário: Mrs. Annette Gorczany": true,
+				"Usuário: Nicolas O Kumabe": true,
+				"Usuário: Dianne Satterfield": true,
+				"Usuário: Margarita Rutherford": true,
+				"Usuário: automation.7829": true,
+				"Usuário: Robson Cerqueira": true,
+				"Usuário: Novella": true,
+				"Usuário: Anthony Huel": true,
+				"Usuário: Bumbum Guloso da Silva": true,
+				"Usuário: Claudia Gutkowski": true,
+				"Usuário: Eloisa": true,
+				"Usuário: Michelle Bradtke": true,
+				"Usuário: Humberto": true,
+				"Usuário: Derrick": true,
+				"Usuário: Eloise": true,
+				"Usuário: Zola": true,
+				"Usuário: Nico": true,
+				"Usuário: Edythe": true,
+				"Usuário: Vesta": true,
+				"Usuário: Mr. Ricardo Kilback": true,
+				"Usuário: Allen Botsford": true,
+				"Usuário: Nicolas": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Quantidade de usuários maior que 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Todos os usuários possuem administrador como 'true'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Fulano da Silva": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Rodrigo": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Valentin": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Levi Crona": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: CarolinaQATeste": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.8773": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Lorena Simonis": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Endrick": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Emma": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Matthew": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Abel Mann": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Victor Davis": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Joanna": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Jacinto Pinto Aquino Rego": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.9177": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Carrie Weber": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Antonia O'Connell": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.7509": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Melinda McCullough": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: kevin": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Ronaldo Barbosa da Silva": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.2306": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Hannah Harber": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Lester Ortiz": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Piper": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Zena": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Vinicius Júnior": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.2843": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.3057": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Alison Stanton": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Ignacio Schaden": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.1639": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Felicia Spinka": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Cesar Pouros-Skiles V": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Taylor Moen": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Mrs. Kristi Tromp": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.9614": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: junior cardoso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Luiz": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Tommy": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Lcs QA Admin": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Christopher Weissnat": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Miss Tricia Prohaska": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Peyton": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: teste robot api": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Roselyn": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Mrs. Annette Gorczany": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Nicolas O Kumabe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Dianne Satterfield": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Margarita Rutherford": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: automation.7829": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Robson Cerqueira": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Novella": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Anthony Huel": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Bumbum Guloso da Silva": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Claudia Gutkowski": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Eloisa": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Michelle Bradtke": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Humberto": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Derrick": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Eloise": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Zola": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Nico": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Edythe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Vesta": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Mr. Ricardo Kilback": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Allen Botsford": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuário: Nicolas": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				296
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Quantidade de usuários maior que 0": true,
+					"Todos os usuários possuem administrador como 'true'": true,
+					"Usuário: Fulano da Silva": true,
+					"Usuário: Rodrigo": true,
+					"Usuário: Valentin": true,
+					"Usuário: Levi Crona": true,
+					"Usuário: CarolinaQATeste": true,
+					"Usuário: automation.8773": true,
+					"Usuário: Lorena Simonis": true,
+					"Usuário: Endrick": true,
+					"Usuário: Emma": true,
+					"Usuário: Matthew": true,
+					"Usuário: Abel Mann": true,
+					"Usuário: Victor Davis": true,
+					"Usuário: Joanna": true,
+					"Usuário: Jacinto Pinto Aquino Rego": true,
+					"Usuário: automation.9177": true,
+					"Usuário: Carrie Weber": true,
+					"Usuário: Antonia O'Connell": true,
+					"Usuário: automation.7509": true,
+					"Usuário: Melinda McCullough": true,
+					"Usuário: kevin": true,
+					"Usuário: Ronaldo Barbosa da Silva": true,
+					"Usuário: automation.2306": true,
+					"Usuário: Hannah Harber": true,
+					"Usuário: Lester Ortiz": true,
+					"Usuário: Piper": true,
+					"Usuário: Zena": true,
+					"Usuário: Vinicius Júnior": true,
+					"Usuário: automation.2843": true,
+					"Usuário: automation.3057": true,
+					"Usuário: Alison Stanton": true,
+					"Usuário: Ignacio Schaden": true,
+					"Usuário: automation.1639": true,
+					"Usuário: Felicia Spinka": true,
+					"Usuário: Cesar Pouros-Skiles V": true,
+					"Usuário: Taylor Moen": true,
+					"Usuário: Mrs. Kristi Tromp": true,
+					"Usuário: automation.9614": true,
+					"Usuário: junior cardoso": true,
+					"Usuário: Luiz": true,
+					"Usuário: Tommy": true,
+					"Usuário: Lcs QA Admin": true,
+					"Usuário: Christopher Weissnat": true,
+					"Usuário: Miss Tricia Prohaska": true,
+					"Usuário: Peyton": true,
+					"Usuário: teste robot api": true,
+					"Usuário: Roselyn": true,
+					"Usuário: Mrs. Annette Gorczany": true,
+					"Usuário: Nicolas O Kumabe": true,
+					"Usuário: Dianne Satterfield": true,
+					"Usuário: Margarita Rutherford": true,
+					"Usuário: automation.7829": true,
+					"Usuário: Robson Cerqueira": true,
+					"Usuário: Novella": true,
+					"Usuário: Anthony Huel": true,
+					"Usuário: Bumbum Guloso da Silva": true,
+					"Usuário: Claudia Gutkowski": true,
+					"Usuário: Eloisa": true,
+					"Usuário: Michelle Bradtke": true,
+					"Usuário: Humberto": true,
+					"Usuário: Derrick": true,
+					"Usuário: Eloise": true,
+					"Usuário: Zola": true,
+					"Usuário: Nico": true,
+					"Usuário: Edythe": true,
+					"Usuário: Vesta": true,
+					"Usuário: Mr. Ricardo Kilback": true,
+					"Usuário: Allen Botsford": true,
+					"Usuário: Nicolas": true
+				}
+			]
+		},
+		{
+			"id": "e4b8ce1d-4b8a-45d0-85ad-9bc4df72bdf5",
+			"name": "Administrador nulo",
+			"url": "https://serverest.dev/usuarios?administrador=",
+			"time": 296,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				296
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "161907ef-51a0-4c89-81f6-bb747e7dbbc5",
+			"name": "Buscar usuário por ID",
+			"url": "https://serverest.dev/usuarios/apRwqUSzc7c4SjkD",
+			"time": 244,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Validar usuário único": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validar usuário único": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				244
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Validar usuário único": true
+				}
+			]
+		},
+		{
+			"id": "02d116ab-aae5-403f-8f48-48462c8f9cf6",
+			"name": "Usuário inexistente",
+			"url": "https://serverest.dev/usuarios/0000000",
+			"time": 186,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				186
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "68f468c3-b02c-4225-9e7d-2a8e27af4007",
+			"name": "Usuário editado com sucesso",
+			"url": "https://serverest.dev/usuarios/qD9WLGjtLd9cWKTA",
+			"time": 189,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				189
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "8554b15d-4fad-49d0-91f0-c459aa73d0ab",
+			"name": "Pesquisa sem ID",
+			"url": "https://serverest.dev/usuarios/",
+			"time": 191,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {
+				"Status code deve ser 405": true,
+				"Valida mensagem de erro": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 405": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de erro": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				191
+			],
+			"allTests": [
+				{
+					"Status code deve ser 405": true,
+					"Valida mensagem de erro": true
+				}
+			]
+		},
+		{
+			"id": "43367fe5-7c33-4e9d-8571-20c7dca2a4bf",
+			"name": "Email usado",
+			"url": "https://serverest.dev/usuarios/z2Zx2TLjXfKvjsMw",
+			"time": 190,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de erro": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de erro": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				190
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de erro": true
+				}
+			]
+		},
+		{
+			"id": "fcfa5326-08b3-41af-85b4-d4faf025c680",
+			"name": "Usuário deletado com sucesso",
+			"url": "https://serverest.dev/usuarios/apRwqUSzc7c4SjkD",
+			"time": 189,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				189
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "3b3455ea-0a8f-481d-8551-7d770be037b0",
+			"name": "Sem o ID",
+			"url": "https://serverest.dev/usuarios/",
+			"time": 191,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {
+				"Status code deve ser 405": true,
+				"Valida mensagem de erro": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 405": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de erro": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				191
+			],
+			"allTests": [
+				{
+					"Status code deve ser 405": true,
+					"Valida mensagem de erro": true
+				}
+			]
+		},
+		{
+			"id": "9e73674c-6494-41a0-b3ce-7931b52d251d",
+			"name": "ID errado",
+			"url": "https://serverest.dev/usuarios/0000000",
+			"time": 161,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de erro": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de erro": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				161
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de erro": true
+				}
+			]
+		},
+		{
+			"id": "99ce97bd-7796-4d5d-bf50-4d763b2b2d39",
+			"name": "Excluir usuário 1",
+			"url": "https://serverest.dev/usuarios/qD9WLGjtLd9cWKTA",
+			"time": 164,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				164
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "ff9d2089-a63b-4aae-b5ae-3243ae817415",
+			"name": "Excluir usuário 2",
+			"url": "https://serverest.dev/usuarios/z2Zx2TLjXfKvjsMw",
+			"time": 192,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				192
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 9492,
+	"collection": {
+		"requests": [
+			{
+				"id": "25987620-3c5f-4226-a468-20005f3b0571",
+				"method": "POST"
+			},
+			{
+				"id": "edbd951c-397f-45f9-98d5-141c9989d11f",
+				"method": "POST"
+			},
+			{
+				"id": "69c24bcd-f1f5-4a12-aa9f-57577140e24f",
+				"method": "POST"
+			},
+			{
+				"id": "eb73eb32-7e61-43b7-9778-8a593726267b",
+				"method": "POST"
+			},
+			{
+				"id": "61bae844-b4a2-4729-9096-ee73e74d4af3",
+				"method": "GET"
+			},
+			{
+				"id": "0c1d3c46-9a4d-42c9-87cb-1fe2e0334712",
+				"method": "PUT"
+			},
+			{
+				"id": "e47bde3f-c6d6-4140-bed1-acac31efbc32",
+				"method": "DELETE"
+			},
+			{
+				"id": "ec5d3071-99a3-4758-9634-3cd553e3a407",
+				"method": "POST"
+			},
+			{
+				"id": "9f013a06-37c2-47fc-92f2-cee917fba906",
+				"method": "DELETE"
+			},
+			{
+				"id": "83902030-3069-40f1-a24d-5644702f38be",
+				"method": "POST"
+			},
+			{
+				"id": "1a0b5dae-1bc0-4564-9465-0df2d7f12621",
+				"method": "POST"
+			},
+			{
+				"id": "16a33714-ba1e-42d3-90ee-e42b68e48dbf",
+				"method": "POST"
+			},
+			{
+				"id": "e2bc3b6e-8e18-4152-98a5-01135d4de271",
+				"method": "POST"
+			},
+			{
+				"id": "d39e01d6-08f3-4138-a667-9e0a9c5ef6ee",
+				"method": "POST"
+			},
+			{
+				"id": "444b02fa-46e8-4ca6-900c-d0865d179f95",
+				"method": "POST"
+			},
+			{
+				"id": "b621b79a-6e23-41ae-b698-95cf42d50b83",
+				"method": "POST"
+			},
+			{
+				"id": "a88cf8ce-310f-4a7f-a0c6-f3378fc7ea99",
+				"method": "POST"
+			},
+			{
+				"id": "d80a6cc7-846d-480d-854b-f8bc877f8992",
+				"method": "POST"
+			},
+			{
+				"id": "db453ac9-5324-40f8-b20a-a3d7199038c5",
+				"method": "POST"
+			},
+			{
+				"id": "901fe8c5-5680-42c7-80ec-a7367ec6a376",
+				"method": "GET"
+			},
+			{
+				"id": "ee3cf744-1bf1-45db-b104-b31e0de94a06",
+				"method": "GET"
+			},
+			{
+				"id": "de80e3f5-39e3-4899-96b2-290d0c284767",
+				"method": "GET"
+			},
+			{
+				"id": "45b0a3ec-e992-4ea2-b219-2d299bb37519",
+				"method": "GET"
+			},
+			{
+				"id": "f0e71e0e-5e17-447e-8101-1e0c3a71ea5c",
+				"method": "GET"
+			},
+			{
+				"id": "ad4973eb-bf09-4d9d-a235-f59fd800852e",
+				"method": "GET"
+			},
+			{
+				"id": "fe848a64-4479-4a41-bea5-f0b477daf5be",
+				"method": "GET"
+			},
+			{
+				"id": "344f3ba4-125e-4f05-8500-eff9404a32d8",
+				"method": "GET"
+			},
+			{
+				"id": "4acc9918-f63d-46e8-91f3-5a76f405c507",
+				"method": "GET"
+			},
+			{
+				"id": "63a6d6cd-185c-4e63-bf2c-9b597a2e6c22",
+				"method": "GET"
+			},
+			{
+				"id": "e4b8ce1d-4b8a-45d0-85ad-9bc4df72bdf5",
+				"method": "GET"
+			},
+			{
+				"id": "161907ef-51a0-4c89-81f6-bb747e7dbbc5",
+				"method": "GET"
+			},
+			{
+				"id": "02d116ab-aae5-403f-8f48-48462c8f9cf6",
+				"method": "GET"
+			},
+			{
+				"id": "68f468c3-b02c-4225-9e7d-2a8e27af4007",
+				"method": "PUT"
+			},
+			{
+				"id": "8554b15d-4fad-49d0-91f0-c459aa73d0ab",
+				"method": "PUT"
+			},
+			{
+				"id": "43367fe5-7c33-4e9d-8571-20c7dca2a4bf",
+				"method": "PUT"
+			},
+			{
+				"id": "fcfa5326-08b3-41af-85b4-d4faf025c680",
+				"method": "DELETE"
+			},
+			{
+				"id": "3b3455ea-0a8f-481d-8551-7d770be037b0",
+				"method": "DELETE"
+			},
+			{
+				"id": "9e73674c-6494-41a0-b3ce-7931b52d251d",
+				"method": "DELETE"
+			},
+			{
+				"id": "99ce97bd-7796-4d5d-bf50-4d763b2b2d39",
+				"method": "DELETE"
+			},
+			{
+				"id": "ff9d2089-a63b-4aae-b5ae-3243ae817415",
+				"method": "DELETE"
+			}
+		]
+	}
+}

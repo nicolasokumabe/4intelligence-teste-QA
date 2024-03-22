@@ -1,0 +1,2456 @@
+{
+	"id": "5aa2d6d0-4de4-4cae-a5d1-49f681eec3d0",
+	"name": "4-CARRINHOS",
+	"timestamp": "2024-03-21T17:00:54.208Z",
+	"collection_id": "29279522-c52573ac-ca88-464e-acf9-0dafc9e9b68f",
+	"folder_id": 0,
+	"environment_id": "29279522-1d388418-0748-4154-9cc0-44cf1f434611",
+	"totalPass": 132,
+	"totalFail": 16,
+	"results": [
+		{
+			"id": "29328ab5-e4fd-4054-9dbd-dc40833b743b",
+			"name": "Criar usuário",
+			"url": "https://serverest.dev/usuarios",
+			"time": 168,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 201": false,
+				"Valida mensagem de sucesso": false
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				168
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": false,
+					"Valida mensagem de sucesso": false
+				}
+			]
+		},
+		{
+			"id": "3dd9cac0-c346-468b-8232-9fafd3ce6fbc",
+			"name": "Login",
+			"url": "https://serverest.dev/login",
+			"time": 164,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de sucesso": true,
+				"Valida se há token de autorização": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida se há token de autorização": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				164
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de sucesso": true,
+					"Valida se há token de autorização": true
+				}
+			]
+		},
+		{
+			"id": "5b66f69b-f17a-49c5-b6a1-1cfcbb0ca014",
+			"name": "Produto 0",
+			"url": "https://serverest.dev/produtos",
+			"time": 166,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true,
+				"Valida se retorna o _id": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida se retorna o _id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				166
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true,
+					"Valida se retorna o _id": true
+				}
+			]
+		},
+		{
+			"id": "7a08d5ab-c6ed-4739-a7b0-35788f3cf61a",
+			"name": "Produto 1",
+			"url": "https://serverest.dev/produtos",
+			"time": 296,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true,
+				"Valida se retorna o _id": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida se retorna o _id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				296
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true,
+					"Valida se retorna o _id": true
+				}
+			]
+		},
+		{
+			"id": "14f2c803-d57a-42aa-8d02-4e8b599e46fd",
+			"name": "Criar usuário",
+			"url": "https://serverest.dev/usuarios",
+			"time": 497,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				497
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "0c03cc5c-15f2-4332-9905-e8952f7dafab",
+			"name": "Login",
+			"url": "https://serverest.dev/login",
+			"time": 178,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de sucesso": true,
+				"Valida se há token de autorização": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida se há token de autorização": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				178
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de sucesso": true,
+					"Valida se há token de autorização": true
+				}
+			]
+		},
+		{
+			"id": "e3fdf7df-0fdf-45f0-bbad-b43a4668dba3",
+			"name": "Produto 2",
+			"url": "https://serverest.dev/produtos",
+			"time": 164,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true,
+				"Valida se retorna o _id": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida se retorna o _id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				164
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true,
+					"Valida se retorna o _id": true
+				}
+			]
+		},
+		{
+			"id": "6ed86ae0-a933-400b-85ba-cd7a753b58d7",
+			"name": "Criar usuário",
+			"url": "https://serverest.dev/usuarios",
+			"time": 318,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				318
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "67c5b7ce-5821-47e7-9645-d0ac5facfbe6",
+			"name": "Login",
+			"url": "https://serverest.dev/login",
+			"time": 595,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de sucesso": true,
+				"Valida se há token de autorização": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida se há token de autorização": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				595
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de sucesso": true,
+					"Valida se há token de autorização": true
+				}
+			]
+		},
+		{
+			"id": "cbc05db4-5ece-405f-b94f-1f6648ff5954",
+			"name": "Produto 3",
+			"url": "https://serverest.dev/produtos",
+			"time": 598,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true,
+				"Valida se retorna o _id": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida se retorna o _id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				598
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true,
+					"Valida se retorna o _id": true
+				}
+			]
+		},
+		{
+			"id": "7749adcc-007b-4bfd-8bb8-9b78856b0510",
+			"name": "Carrinho",
+			"url": "https://serverest.dev/carrinhos",
+			"time": 391,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true,
+				"Valida se retorna o _id": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida se retorna o _id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				391
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true,
+					"Valida se retorna o _id": true
+				}
+			]
+		},
+		{
+			"id": "d649a5d2-e1cd-4fbe-a403-934788387d5a",
+			"name": "Criar usuário",
+			"url": "https://serverest.dev/usuarios",
+			"time": 190,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				190
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "a0913ba6-6473-40a0-a68b-1c8aac79c68c",
+			"name": "Login",
+			"url": "https://serverest.dev/login",
+			"time": 595,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de sucesso": true,
+				"Valida se há token de autorização": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida se há token de autorização": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				595
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de sucesso": true,
+					"Valida se há token de autorização": true
+				}
+			]
+		},
+		{
+			"id": "b2ff6de7-95b6-4858-9514-d6de9cf92a12",
+			"name": "Produto 4",
+			"url": "https://serverest.dev/produtos",
+			"time": 172,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true,
+				"Valida se retorna o _id": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida se retorna o _id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				172
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true,
+					"Valida se retorna o _id": true
+				}
+			]
+		},
+		{
+			"id": "bff787d6-fc2e-46b6-b6cb-6695842e469e",
+			"name": "Carrinho",
+			"url": "https://serverest.dev/carrinhos",
+			"time": 203,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true,
+				"Valida se retorna o _id": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida se retorna o _id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				203
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true,
+					"Valida se retorna o _id": true
+				}
+			]
+		},
+		{
+			"id": "1f9b2f83-957e-4f51-97cc-67cecddca903",
+			"name": "Cadastrar carrinho",
+			"url": "https://serverest.dev/carrinhos",
+			"time": 166,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true,
+				"Valida se retorna o _id": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida se retorna o _id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				166
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true,
+					"Valida se retorna o _id": true
+				}
+			]
+		},
+		{
+			"id": "9be90ac5-8298-4ebc-ac91-466c5150cf35",
+			"name": "Buscar carrinho",
+			"url": "https://serverest.dev/carrinhos/aeuvD0VsfZV0s6GJ",
+			"time": 213,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Preço total está correto": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Preço total está correto": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				213
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Preço total está correto": true
+				}
+			]
+		},
+		{
+			"id": "394e0204-3290-4fe9-8b1b-90a47768f006",
+			"name": "Cancelar compra",
+			"url": "https://serverest.dev/carrinhos/cancelar-compra",
+			"time": 393,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Verifica se a descrição é obrigatória": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifica se a descrição é obrigatória": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				393
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Verifica se a descrição é obrigatória": true
+				}
+			]
+		},
+		{
+			"id": "72827e7d-f8af-43f1-8926-515fda3465bc",
+			"name": "Cadastrar segundo carrinho",
+			"url": "https://serverest.dev/carrinhos",
+			"time": 600,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true,
+				"Valida se retorna o _id": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida se retorna o _id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				600
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true,
+					"Valida se retorna o _id": true
+				}
+			]
+		},
+		{
+			"id": "60e2f7f4-3978-4214-b36f-57bf66cad5e1",
+			"name": "Retornar produto ao estoque",
+			"url": "https://serverest.dev/carrinhos/concluir-compra",
+			"time": 171,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Verifica se a descrição é obrigatória": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifica se a descrição é obrigatória": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				171
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Verifica se a descrição é obrigatória": true
+				}
+			]
+		},
+		{
+			"id": "7c44d209-0693-4252-8f0b-bb9c7a1e543c",
+			"name": "Carrinho cadastrado com sucesso",
+			"url": "https://serverest.dev/carrinhos",
+			"time": 166,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true,
+				"Valida se retorna o _id": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida se retorna o _id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				166
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true,
+					"Valida se retorna o _id": true
+				}
+			]
+		},
+		{
+			"id": "c2653d8b-787e-4bb0-9d87-556b878a8832",
+			"name": "Sem token",
+			"url": "https://serverest.dev/carrinhos",
+			"time": 159,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code deve ser 201": false,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				159
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": false,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "54b6fead-120e-4837-92ac-afca34661349",
+			"name": "IdProduto vazio",
+			"url": "https://serverest.dev/carrinhos",
+			"time": 253,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 401": false,
+				"Erro relacionado aos produtos": true,
+				"Erro relacionado aos IDs dos produtos": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 401": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Erro relacionado aos produtos": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Erro relacionado aos IDs dos produtos": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				253
+			],
+			"allTests": [
+				{
+					"Status code deve ser 401": false,
+					"Erro relacionado aos produtos": true,
+					"Erro relacionado aos IDs dos produtos": true
+				}
+			]
+		},
+		{
+			"id": "b0628baf-67c7-4ddd-acc3-cb889c778143",
+			"name": "Cancelar compra",
+			"url": "https://serverest.dev/carrinhos/cancelar-compra",
+			"time": 390,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Verifica se a descrição é obrigatória": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifica se a descrição é obrigatória": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				390
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Verifica se a descrição é obrigatória": true
+				}
+			]
+		},
+		{
+			"id": "50c5fb7f-d690-4017-b440-e97293cfab43",
+			"name": "IdProduto inexistente",
+			"url": "https://serverest.dev/carrinhos",
+			"time": 391,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Verifica se o produto não foi encontrado": true,
+				"Verifica os detalhes do item": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifica se o produto não foi encontrado": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifica os detalhes do item": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				391
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Verifica se o produto não foi encontrado": true,
+					"Verifica os detalhes do item": true
+				}
+			]
+		},
+		{
+			"id": "a8042894-d480-4448-ae68-7da2cd4eb20b",
+			"name": "IdProduto como inteiro",
+			"url": "https://serverest.dev/carrinhos",
+			"time": 391,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Verifica se a mensagem de erro para produtos[0].idProduto está correta": true,
+				"Verifica se a mensagem de erro para produtos está correta": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifica se a mensagem de erro para produtos[0].idProduto está correta": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifica se a mensagem de erro para produtos está correta": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				391
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Verifica se a mensagem de erro para produtos[0].idProduto está correta": true,
+					"Verifica se a mensagem de erro para produtos está correta": true
+				}
+			]
+		},
+		{
+			"id": "d8580471-1b27-4f65-aa77-b2c23bbca8f5",
+			"name": "Sem o campo IdProduto",
+			"url": "https://serverest.dev/carrinhos",
+			"time": 272,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Verifica se a mensagem de erro para produtos[0].idProduto está correta": true,
+				"Verifica se a mensagem de erro para produtos está correta": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifica se a mensagem de erro para produtos[0].idProduto está correta": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifica se a mensagem de erro para produtos está correta": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				272
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Verifica se a mensagem de erro para produtos[0].idProduto está correta": true,
+					"Verifica se a mensagem de erro para produtos está correta": true
+				}
+			]
+		},
+		{
+			"id": "c691969c-f4a8-4aad-982c-b76f56a369f7",
+			"name": "Sem o campo descrição",
+			"url": "https://serverest.dev/produtos",
+			"time": 171,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Valida mensagem de erro": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de erro": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				171
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Valida mensagem de erro": true
+				}
+			]
+		},
+		{
+			"id": "0d18f9dd-c945-4786-8225-42bb01b4139b",
+			"name": "Quantidade com valor negativo",
+			"url": "https://serverest.dev/carrinhos",
+			"time": 325,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Verifica se a quantidade do primeiro produto é um número positivo": true,
+				"Verifica se há pelo menos um produto obrigatório": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifica se a quantidade do primeiro produto é um número positivo": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifica se há pelo menos um produto obrigatório": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				325
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Verifica se a quantidade do primeiro produto é um número positivo": true,
+					"Verifica se há pelo menos um produto obrigatório": true
+				}
+			]
+		},
+		{
+			"id": "6823245c-979f-438d-aceb-acfc7dc97b97",
+			"name": "Quantidade com valor alfanumérico",
+			"url": "https://serverest.dev/carrinhos",
+			"time": 163,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Verifica se a quantidade do primeiro produto é um número": true,
+				"Verifica se há pelo menos um produto obrigatório": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifica se a quantidade do primeiro produto é um número": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifica se há pelo menos um produto obrigatório": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				163
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Verifica se a quantidade do primeiro produto é um número": true,
+					"Verifica se há pelo menos um produto obrigatório": true
+				}
+			]
+		},
+		{
+			"id": "8512eb58-a6fc-4565-9dba-d2fde8cfc07c",
+			"name": "Quantidade com valor zero",
+			"url": "https://serverest.dev/carrinhos",
+			"time": 214,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Verifica se a quantidade do primeiro produto é um número positivo": true,
+				"Verifica se há pelo menos um produto obrigatório": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifica se a quantidade do primeiro produto é um número positivo": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifica se há pelo menos um produto obrigatório": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				214
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Verifica se a quantidade do primeiro produto é um número positivo": true,
+					"Verifica se há pelo menos um produto obrigatório": true
+				}
+			]
+		},
+		{
+			"id": "2077e505-54ec-4034-b81a-fb54225ac6f4",
+			"name": "Sem o campo quantidade",
+			"url": "https://serverest.dev/carrinhos",
+			"time": 165,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Verifica se a quantidade do primeiro produto é obrigatória": true,
+				"Verifica se há pelo menos um produto obrigatório": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifica se a quantidade do primeiro produto é obrigatória": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifica se há pelo menos um produto obrigatório": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				165
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Verifica se a quantidade do primeiro produto é obrigatória": true,
+					"Verifica se há pelo menos um produto obrigatório": true
+				}
+			]
+		},
+		{
+			"id": "d650fd60-8654-4147-83bb-eea0646912da",
+			"name": "Listar carrinhos cadastrados",
+			"url": "https://serverest.dev/carrinhos",
+			"time": 212,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 201": false,
+				"Resposta contém dados": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Resposta contém dados": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				212
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": false,
+					"Resposta contém dados": true
+				}
+			]
+		},
+		{
+			"id": "1ddd71cb-6bd9-402d-bfe7-29a5b01049c5",
+			"name": "Filtrar por ID",
+			"url": "https://serverest.dev/carrinhos?_id=puK1bDe9q6qgFZrD",
+			"time": 387,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Resposta contém dados": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resposta contém dados": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				387
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Resposta contém dados": true
+				}
+			]
+		},
+		{
+			"id": "4b1722fe-0193-4fcc-ad72-103e7eeac564",
+			"name": "ID inexistente",
+			"url": "https://serverest.dev/carrinhos?_id=123456",
+			"time": 187,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 201": false,
+				"Resposta está vazia": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Resposta está vazia": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				187
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": false,
+					"Resposta está vazia": true
+				}
+			]
+		},
+		{
+			"id": "290f006c-9a19-478e-b586-b1898a277c60",
+			"name": "Filtrar por preço total",
+			"url": "https://serverest.dev/carrinhos?precoTotal=35",
+			"time": 172,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 201": false,
+				"Resposta contém carrinhos": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Resposta contém carrinhos": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				172
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": false,
+					"Resposta contém carrinhos": true
+				}
+			]
+		},
+		{
+			"id": "4f03e740-a784-40a6-a76f-870a6152746c",
+			"name": "Preço total negativo",
+			"url": "https://serverest.dev/carrinhos?precoTotal=-50",
+			"time": 165,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"Mensagem de erro deve ser 'precoTotal deve ser um número positivo'": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Mensagem de erro deve ser 'precoTotal deve ser um número positivo'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				165
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"Mensagem de erro deve ser 'precoTotal deve ser um número positivo'": true
+				}
+			]
+		},
+		{
+			"id": "45ac21ee-9438-4926-98d0-2daef63bbe45",
+			"name": "Filtrar por quantidade total",
+			"url": "https://serverest.dev/carrinhos?quantidadeTotal=1",
+			"time": 168,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"A resposta não deve estar vazia": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"A resposta não deve estar vazia": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				168
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"A resposta não deve estar vazia": true
+				}
+			]
+		},
+		{
+			"id": "b3de192e-8ff0-4667-875e-e4064651583f",
+			"name": "Quantidade total negativa",
+			"url": "https://serverest.dev/carrinhos?quantidadeTotal=-500",
+			"time": 249,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 200": false,
+				"Mensagem de erro deve ser 'quantidadeTotal deve ser um número positivo'": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Mensagem de erro deve ser 'quantidadeTotal deve ser um número positivo'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				249
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": false,
+					"Mensagem de erro deve ser 'quantidadeTotal deve ser um número positivo'": true
+				}
+			]
+		},
+		{
+			"id": "db977bf6-26ec-4e1d-878e-d8fe7e77fb19",
+			"name": "FIltrar por ID do usuário",
+			"url": "https://serverest.dev/carrinhos?idUsuario=z8BuzgE98YEtHI4d",
+			"time": 394,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"A resposta deve conter a propriedade 'quantidade' e 'carrinhos'": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"A resposta deve conter a propriedade 'quantidade' e 'carrinhos'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				394
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"A resposta deve conter a propriedade 'quantidade' e 'carrinhos'": true
+				}
+			]
+		},
+		{
+			"id": "e631e9b3-210a-47f2-a11d-391dacfe52dd",
+			"name": "ID do usuário inexistente",
+			"url": "https://serverest.dev/carrinhos?idUsuario=asdzxc",
+			"time": 391,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"A resposta deve conter a propriedade 'quantidade' e 'carrinhos'": true,
+				"A quantidade de carrinhos deve ser 0": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"A resposta deve conter a propriedade 'quantidade' e 'carrinhos'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"A quantidade de carrinhos deve ser 0": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				391
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"A resposta deve conter a propriedade 'quantidade' e 'carrinhos'": true,
+					"A quantidade de carrinhos deve ser 0": true
+				}
+			]
+		},
+		{
+			"id": "c1671dd6-a3f7-4826-8d42-a95fb2014cf2",
+			"name": "Buscar carrinho",
+			"url": "https://serverest.dev/carrinhos/puK1bDe9q6qgFZrD",
+			"time": 392,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Resposta contém dados": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resposta contém dados": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				392
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Resposta contém dados": true
+				}
+			]
+		},
+		{
+			"id": "c387e521-7bab-4df4-9b48-0a6dbacd742d",
+			"name": "Carrinho inexistente",
+			"url": "https://serverest.dev/carrinhos/0000000",
+			"time": 391,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code deve ser 400": true,
+				"A mensagem de erro deve ser 'Carrinho não encontrado'": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"A mensagem de erro deve ser 'Carrinho não encontrado'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				391
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": true,
+					"A mensagem de erro deve ser 'Carrinho não encontrado'": true
+				}
+			]
+		},
+		{
+			"id": "18885152-31b7-47a9-b857-ab4add2ba922",
+			"name": "Produto editado com sucesso",
+			"url": "https://serverest.dev/produtos/ahdKnYFqLTmFjz4R",
+			"time": 392,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"A mensagem de sucesso deve ser 'Cadastro realizado com sucesso'": false
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"A mensagem de sucesso deve ser 'Cadastro realizado com sucesso'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				392
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"A mensagem de sucesso deve ser 'Cadastro realizado com sucesso'": false
+				}
+			]
+		},
+		{
+			"id": "631499eb-adda-4057-ae1c-d74253b220af",
+			"name": "Pesquisa sem ID",
+			"url": "https://serverest.dev/produtos/",
+			"time": 190,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {
+				"Status code deve ser 405": true,
+				"A mensagem de sucesso deve ser 'Cadastro realizado com sucesso'": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 405": {
+					"pass": 1,
+					"fail": 0
+				},
+				"A mensagem de sucesso deve ser 'Cadastro realizado com sucesso'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				190
+			],
+			"allTests": [
+				{
+					"Status code deve ser 405": true,
+					"A mensagem de sucesso deve ser 'Cadastro realizado com sucesso'": true
+				}
+			]
+		},
+		{
+			"id": "ccdaf248-2d56-44e8-a959-dee91c321018",
+			"name": "Nome existente",
+			"url": "https://serverest.dev/produtos/ahdKnYFqLTmFjz4R",
+			"time": 375,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 400": false,
+				"A mensagem deve ser 'Já existe produto com esse nome'": false
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"A mensagem deve ser 'Já existe produto com esse nome'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				375
+			],
+			"allTests": [
+				{
+					"Status code deve ser 400": false,
+					"A mensagem deve ser 'Já existe produto com esse nome'": false
+				}
+			]
+		},
+		{
+			"id": "4981d1cf-906a-4854-bcde-07573d5f2b75",
+			"name": "Cancelar compra",
+			"url": "https://serverest.dev/carrinhos/cancelar-compra",
+			"time": 174,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"A mensagem deve ser 'Registro excluído com sucesso. Estoque dos produtos reabastecido'": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"A mensagem deve ser 'Registro excluído com sucesso. Estoque dos produtos reabastecido'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				174
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"A mensagem deve ser 'Registro excluído com sucesso. Estoque dos produtos reabastecido'": true
+				}
+			]
+		},
+		{
+			"id": "44c900be-0704-471e-b84d-6b69bbb9139d",
+			"name": "Cancelar compra sem autorização",
+			"url": "https://serverest.dev/carrinhos/cancelar-compra",
+			"time": 219,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code deve ser 401": true,
+				"A mensagem deve ser 'Token de acesso ausente, inválido, expirado ou usuário do token não existe mais'": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 401": {
+					"pass": 1,
+					"fail": 0
+				},
+				"A mensagem deve ser 'Token de acesso ausente, inválido, expirado ou usuário do token não existe mais'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				219
+			],
+			"allTests": [
+				{
+					"Status code deve ser 401": true,
+					"A mensagem deve ser 'Token de acesso ausente, inválido, expirado ou usuário do token não existe mais'": true
+				}
+			]
+		},
+		{
+			"id": "23273b71-1936-4f74-90e3-934daae66cb2",
+			"name": "Criar carrinho",
+			"url": "https://serverest.dev/carrinhos",
+			"time": 190,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code deve ser 201": true,
+				"Valida mensagem de sucesso": true,
+				"Valida se retorna o _id": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida se retorna o _id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				190
+			],
+			"allTests": [
+				{
+					"Status code deve ser 201": true,
+					"Valida mensagem de sucesso": true,
+					"Valida se retorna o _id": true
+				}
+			]
+		},
+		{
+			"id": "bd68bc23-61b9-4612-af15-e06d8549d277",
+			"name": "Retornar produto ao estoque",
+			"url": "https://serverest.dev/carrinhos/concluir-compra",
+			"time": 166,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"A mensagem deve ser 'Registro excluído com sucesso'": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"A mensagem deve ser 'Registro excluído com sucesso'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				166
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"A mensagem deve ser 'Registro excluído com sucesso'": true
+				}
+			]
+		},
+		{
+			"id": "326c7dc6-c8cb-41ca-96a1-582b5b5ce70b",
+			"name": "Retornar produto ao estoque sem autorização",
+			"url": "https://serverest.dev/carrinhos/concluir-compra",
+			"time": 211,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code deve ser 401": true,
+				"A mensagem deve ser 'Token de acesso ausente, inválido, expirado ou usuário do token não existe mais'": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 401": {
+					"pass": 1,
+					"fail": 0
+				},
+				"A mensagem deve ser 'Token de acesso ausente, inválido, expirado ou usuário do token não existe mais'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				211
+			],
+			"allTests": [
+				{
+					"Status code deve ser 401": true,
+					"A mensagem deve ser 'Token de acesso ausente, inválido, expirado ou usuário do token não existe mais'": true
+				}
+			]
+		},
+		{
+			"id": "0b14dac3-5c9a-477a-beac-a54e968a0013",
+			"name": "Excluir produto 0",
+			"url": "https://serverest.dev/produtos/Q5IIGMZnsNY7N94B",
+			"time": 166,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Validar mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validar mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				166
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Validar mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "724ce41e-2b6f-41f2-b09e-42aaf55e4339",
+			"name": "Excluir produto 1",
+			"url": "https://serverest.dev/produtos/null",
+			"time": 169,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Validar mensagem de sucesso": false
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validar mensagem de sucesso": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				169
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Validar mensagem de sucesso": false
+				}
+			]
+		},
+		{
+			"id": "5f87aec8-9b30-4244-acf4-367d2b0e2e25",
+			"name": "Excluir usuário",
+			"url": "https://serverest.dev/usuarios/null",
+			"time": 232,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de sucesso": false
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				232
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de sucesso": false
+				}
+			]
+		},
+		{
+			"id": "f2e0ccf4-4ef2-45b8-9ca3-c38d58770c7d",
+			"name": "Cancelar compra",
+			"url": "https://serverest.dev/carrinhos/cancelar-compra",
+			"time": 393,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"A mensagem deve ser 'Registro excluído com sucesso. Estoque dos produtos reabastecido'": false
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"A mensagem deve ser 'Registro excluído com sucesso. Estoque dos produtos reabastecido'": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				393
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"A mensagem deve ser 'Registro excluído com sucesso. Estoque dos produtos reabastecido'": false
+				}
+			]
+		},
+		{
+			"id": "4428d4cb-94c2-4af0-96a6-9d3dcd4f50b4",
+			"name": "Excluir produto 2",
+			"url": "https://serverest.dev/produtos/ahdKnYFqLTmFjz4R",
+			"time": 167,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Validar mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validar mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				167
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Validar mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "8d651573-a74a-4706-a794-8a33f1e6fe46",
+			"name": "Excluir usuário",
+			"url": "https://serverest.dev/usuarios/OCPWsumqj85N5Hii",
+			"time": 169,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				169
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "e8e454c0-b48a-4552-ace4-138a90c7a9e8",
+			"name": "Cancelar compra",
+			"url": "https://serverest.dev/carrinhos/cancelar-compra",
+			"time": 234,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"A mensagem deve ser 'Registro excluído com sucesso. Estoque dos produtos reabastecido'": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"A mensagem deve ser 'Registro excluído com sucesso. Estoque dos produtos reabastecido'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				234
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"A mensagem deve ser 'Registro excluído com sucesso. Estoque dos produtos reabastecido'": true
+				}
+			]
+		},
+		{
+			"id": "0eacaa0f-0e2f-4e5d-9537-3fc4135cf1d1",
+			"name": "Excluir produto 3",
+			"url": "https://serverest.dev/produtos/Gqo1evLaCygJG2nW",
+			"time": 394,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code deve ser 200": false,
+				"Validar mensagem de sucesso": false
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Validar mensagem de sucesso": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				394
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": false,
+					"Validar mensagem de sucesso": false
+				}
+			]
+		},
+		{
+			"id": "e5397d1a-17ea-43cd-a542-74417697e9e4",
+			"name": "Excluir usuário",
+			"url": "https://serverest.dev/usuarios/z8BuzgE98YEtHI4d",
+			"time": 191,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				191
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "15ba40e8-2264-4ca0-994d-559fa296645e",
+			"name": "Excluir produto 4",
+			"url": "https://serverest.dev/produtos/nZbvVZrWrhkXHBUM",
+			"time": 393,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Validar mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validar mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				393
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Validar mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "8c8457d8-1f87-400c-8d8d-d894f7daafd2",
+			"name": "Excluir usuário",
+			"url": "https://serverest.dev/usuarios/FXQoQYNxk22xiz1d",
+			"time": 393,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code deve ser 200": true,
+				"Valida mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Valida mensagem de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				393
+			],
+			"allTests": [
+				{
+					"Status code deve ser 200": true,
+					"Valida mensagem de sucesso": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 17224,
+	"collection": {
+		"requests": [
+			{
+				"id": "29328ab5-e4fd-4054-9dbd-dc40833b743b",
+				"method": "POST"
+			},
+			{
+				"id": "3dd9cac0-c346-468b-8232-9fafd3ce6fbc",
+				"method": "POST"
+			},
+			{
+				"id": "5b66f69b-f17a-49c5-b6a1-1cfcbb0ca014",
+				"method": "POST"
+			},
+			{
+				"id": "7a08d5ab-c6ed-4739-a7b0-35788f3cf61a",
+				"method": "POST"
+			},
+			{
+				"id": "14f2c803-d57a-42aa-8d02-4e8b599e46fd",
+				"method": "POST"
+			},
+			{
+				"id": "0c03cc5c-15f2-4332-9905-e8952f7dafab",
+				"method": "POST"
+			},
+			{
+				"id": "e3fdf7df-0fdf-45f0-bbad-b43a4668dba3",
+				"method": "POST"
+			},
+			{
+				"id": "6ed86ae0-a933-400b-85ba-cd7a753b58d7",
+				"method": "POST"
+			},
+			{
+				"id": "67c5b7ce-5821-47e7-9645-d0ac5facfbe6",
+				"method": "POST"
+			},
+			{
+				"id": "cbc05db4-5ece-405f-b94f-1f6648ff5954",
+				"method": "POST"
+			},
+			{
+				"id": "7749adcc-007b-4bfd-8bb8-9b78856b0510",
+				"method": "POST"
+			},
+			{
+				"id": "d649a5d2-e1cd-4fbe-a403-934788387d5a",
+				"method": "POST"
+			},
+			{
+				"id": "a0913ba6-6473-40a0-a68b-1c8aac79c68c",
+				"method": "POST"
+			},
+			{
+				"id": "b2ff6de7-95b6-4858-9514-d6de9cf92a12",
+				"method": "POST"
+			},
+			{
+				"id": "bff787d6-fc2e-46b6-b6cb-6695842e469e",
+				"method": "POST"
+			},
+			{
+				"id": "1f9b2f83-957e-4f51-97cc-67cecddca903",
+				"method": "POST"
+			},
+			{
+				"id": "9be90ac5-8298-4ebc-ac91-466c5150cf35",
+				"method": "GET"
+			},
+			{
+				"id": "394e0204-3290-4fe9-8b1b-90a47768f006",
+				"method": "DELETE"
+			},
+			{
+				"id": "72827e7d-f8af-43f1-8926-515fda3465bc",
+				"method": "POST"
+			},
+			{
+				"id": "60e2f7f4-3978-4214-b36f-57bf66cad5e1",
+				"method": "DELETE"
+			},
+			{
+				"id": "7c44d209-0693-4252-8f0b-bb9c7a1e543c",
+				"method": "POST"
+			},
+			{
+				"id": "c2653d8b-787e-4bb0-9d87-556b878a8832",
+				"method": "POST"
+			},
+			{
+				"id": "54b6fead-120e-4837-92ac-afca34661349",
+				"method": "POST"
+			},
+			{
+				"id": "b0628baf-67c7-4ddd-acc3-cb889c778143",
+				"method": "DELETE"
+			},
+			{
+				"id": "50c5fb7f-d690-4017-b440-e97293cfab43",
+				"method": "POST"
+			},
+			{
+				"id": "a8042894-d480-4448-ae68-7da2cd4eb20b",
+				"method": "POST"
+			},
+			{
+				"id": "d8580471-1b27-4f65-aa77-b2c23bbca8f5",
+				"method": "POST"
+			},
+			{
+				"id": "c691969c-f4a8-4aad-982c-b76f56a369f7",
+				"method": "POST"
+			},
+			{
+				"id": "0d18f9dd-c945-4786-8225-42bb01b4139b",
+				"method": "POST"
+			},
+			{
+				"id": "6823245c-979f-438d-aceb-acfc7dc97b97",
+				"method": "POST"
+			},
+			{
+				"id": "8512eb58-a6fc-4565-9dba-d2fde8cfc07c",
+				"method": "POST"
+			},
+			{
+				"id": "2077e505-54ec-4034-b81a-fb54225ac6f4",
+				"method": "POST"
+			},
+			{
+				"id": "d650fd60-8654-4147-83bb-eea0646912da",
+				"method": "GET"
+			},
+			{
+				"id": "1ddd71cb-6bd9-402d-bfe7-29a5b01049c5",
+				"method": "GET"
+			},
+			{
+				"id": "4b1722fe-0193-4fcc-ad72-103e7eeac564",
+				"method": "GET"
+			},
+			{
+				"id": "290f006c-9a19-478e-b586-b1898a277c60",
+				"method": "GET"
+			},
+			{
+				"id": "4f03e740-a784-40a6-a76f-870a6152746c",
+				"method": "GET"
+			},
+			{
+				"id": "45ac21ee-9438-4926-98d0-2daef63bbe45",
+				"method": "GET"
+			},
+			{
+				"id": "b3de192e-8ff0-4667-875e-e4064651583f",
+				"method": "GET"
+			},
+			{
+				"id": "db977bf6-26ec-4e1d-878e-d8fe7e77fb19",
+				"method": "GET"
+			},
+			{
+				"id": "e631e9b3-210a-47f2-a11d-391dacfe52dd",
+				"method": "GET"
+			},
+			{
+				"id": "c1671dd6-a3f7-4826-8d42-a95fb2014cf2",
+				"method": "GET"
+			},
+			{
+				"id": "c387e521-7bab-4df4-9b48-0a6dbacd742d",
+				"method": "GET"
+			},
+			{
+				"id": "18885152-31b7-47a9-b857-ab4add2ba922",
+				"method": "PUT"
+			},
+			{
+				"id": "631499eb-adda-4057-ae1c-d74253b220af",
+				"method": "PUT"
+			},
+			{
+				"id": "ccdaf248-2d56-44e8-a959-dee91c321018",
+				"method": "PUT"
+			},
+			{
+				"id": "4981d1cf-906a-4854-bcde-07573d5f2b75",
+				"method": "DELETE"
+			},
+			{
+				"id": "44c900be-0704-471e-b84d-6b69bbb9139d",
+				"method": "DELETE"
+			},
+			{
+				"id": "23273b71-1936-4f74-90e3-934daae66cb2",
+				"method": "POST"
+			},
+			{
+				"id": "bd68bc23-61b9-4612-af15-e06d8549d277",
+				"method": "DELETE"
+			},
+			{
+				"id": "326c7dc6-c8cb-41ca-96a1-582b5b5ce70b",
+				"method": "DELETE"
+			},
+			{
+				"id": "0b14dac3-5c9a-477a-beac-a54e968a0013",
+				"method": "DELETE"
+			},
+			{
+				"id": "724ce41e-2b6f-41f2-b09e-42aaf55e4339",
+				"method": "DELETE"
+			},
+			{
+				"id": "5f87aec8-9b30-4244-acf4-367d2b0e2e25",
+				"method": "DELETE"
+			},
+			{
+				"id": "f2e0ccf4-4ef2-45b8-9ca3-c38d58770c7d",
+				"method": "DELETE"
+			},
+			{
+				"id": "4428d4cb-94c2-4af0-96a6-9d3dcd4f50b4",
+				"method": "DELETE"
+			},
+			{
+				"id": "8d651573-a74a-4706-a794-8a33f1e6fe46",
+				"method": "DELETE"
+			},
+			{
+				"id": "e8e454c0-b48a-4552-ace4-138a90c7a9e8",
+				"method": "DELETE"
+			},
+			{
+				"id": "0eacaa0f-0e2f-4e5d-9537-3fc4135cf1d1",
+				"method": "DELETE"
+			},
+			{
+				"id": "e5397d1a-17ea-43cd-a542-74417697e9e4",
+				"method": "DELETE"
+			},
+			{
+				"id": "15ba40e8-2264-4ca0-994d-559fa296645e",
+				"method": "DELETE"
+			},
+			{
+				"id": "8c8457d8-1f87-400c-8d8d-d894f7daafd2",
+				"method": "DELETE"
+			}
+		]
+	}
+}
