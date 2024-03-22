@@ -2,19 +2,19 @@ describe('produtos', () => {
   const email1 = 'nicolas.qa.estag@4i.com.br'
   const senha1 = 'estagio4i'
   
-    // it('criando massa de teste 1', () => {
-    //   cy.visit('https://front.serverest.dev/cadastrarusuarios')
+    it('criando massa de teste 1', () => {
+      cy.visit('https://front.serverest.dev/cadastrarusuarios')
   
-    //   cy.get('[data-testid="nome"]').type('Nicolas Kumabe')
-    //   cy.get('[data-testid="email"]').type(`${email1}`)
-    //   cy.get('[data-testid="password"]').type(`${senha1}`)
+      cy.get('[data-testid="nome"]').type('Nicolas Kumabe')
+      cy.get('[data-testid="email"]').type(`${email1}`)
+      cy.get('[data-testid="password"]').type(`${senha1}`)
   
-    //   cy.get('[data-testid="cadastrar"]').click({force: true})
+      cy.get('[data-testid="cadastrar"]').click({force: true})
   
-    //   cy.get('.alert').contains('Cadastro realizado com sucesso')
+      cy.get('.alert').contains('Cadastro realizado com sucesso')
   
-    //   cy.get('h1').contains('Serverest Store')
-    // })
+      cy.get('h1').contains('Serverest Store')
+    })
   
     it('pesquisando produto com sucesso', () => {
       // Dado que me logo no site Serverest
